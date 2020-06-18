@@ -1,0 +1,80 @@
+.task-panel {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	position: relative;
+	border:1px solid #ccc;
+}
+
+.task-panel .task-header {
+	min-height: 40px;
+	border-bottom: 1px solid #ccc;
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	color: #fff;
+	background-color: #555;
+}
+.task-panel .task-header .task-heading {
+	font-size: 1.1em;
+	margin-bottom: 10px;
+}
+.task-panel .task-header .task-meta {
+	display: flex;
+	align-items: center;
+}
+.task-panel .task-header .task-meta span {
+	display: inline-block;
+	width: 200px;
+	font-size: .8em;
+	flex-grow: none;
+}
+
+.task-panel .task-header .task-meta .date {
+	padding: 0 10px;
+	height: 30px;
+	background-color: var(--color-primary);
+	color: #fff;
+}
+.task-panel .task-content {
+	padding: 10px;
+	font-size: .8em;
+	font-weight: bold;
+	background-color: #555;
+	color: #fff;
+}
+
+.btn-edit-task {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+.task-progress-wrapper {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	min-height: 24px;
+	border-radius: 20px;
+	background-color: #eee;
+	padding: 0 10px;
+	box-shadow: inset 0 0 2px #000000;
+}
+.task-progress-wrapper .progress-bar {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 15px;
+	border-radius: 10px;
+	background-color: green;
+}
+.task-progress-wrapper .progress-bar .progress-bar-text {
+	font-size: .7em;
+	color: #fff;
+	font-weight: bold;
+}
+
+.task-content ul,
+.task-content ol {
+	padding-left: 20px!important;
+}

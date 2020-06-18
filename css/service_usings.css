@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css?family=Quattrocento+Sans&display=swap');
+:root {
+	--color-primary:#3b0760;
+	--color-primary-light:#fcfaff;
+	--font-family:'Quattrocento Sans', 'Segoe UI', sans-serif;
+	--color-gray:#666;
+	--navbar-height:35px;
+}
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	min-height: 100vh;
+	font-family: var(--font-family);
+	background-color: #f5f5f5;
+	position: relative;
+}
+body::-webkit-scrollbar {
+    width: 8px;
+}
+body::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    padding: 0 5px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #999;
+    outline: 1px solid #3b0760;
+}
+body::-webkit-scrollbar-thumb:hover {
+	background-color: var(--color-gray);
+}
+
+#banner {
+	width: 100%;
+	height: 350px;
+	display: flex;
+}
+#banner img {
+	width: 100%;
+}
+.navbar {
+	width: 100%;
+}
+.navbar .nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	list-style-type: none;
+	background-color: var(--color-primary);
+	min-height: var(--navbar-height);
+	line-height: var(--navbar-height);
+}
+.navbar .nav .nav-link {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	padding: 0 20px;
+	height: var(--navbar-height);
+	text-transform: uppercase;
+	font-size: .7em;
+	font-weight: bold;
+}
+.navbar .nav .nav-link:hover,
+.navbar .nav .nav-link.active {
+	background-color: rgba(255, 255, 255, .2);
+}
+
+.main {
+	position: sticky!important;
+	top: 200px!important;
+}
+.service-container {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.service-sidebar {
+	flex-basis: 20%;
+	background-color: #f5f5f5;
+}
+
+.service-sidebar.left {
+	/*flex-basis: 30%;*/
+	width: 30%!important;
+	display: flex;
+	padding: 10px;
+	transition:all .3s ease;
+}
+.service-sidebar.right {
+	width: 30%!important;
+}
+
+.service-sidebar.left .sidebar-left {
+	background-color: #fff;
+	width: 100%;
+	padding: 10px;
+}
+
+.service-content {
+	flex:1;
+	min-height: 100vh;
+	padding-top: 30px;
+	padding-left: 20px;
+	padding-right: 20px;
+	position: relative;
+	background-color: #fff;
+
+}
+.service-content-heading {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 20px;
+}
+.service-content-heading img {
+	width: 40px;
+}
+.service-content-heading h4 {
+	font-size: 1.2em;
+	text-transform: uppercase;
+}
+
+.opening-time li {
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+}
+.opening-time li span {
+	flex:1;
+}
+.opening-time li span:first-child {
+	font-weight: bold;
+}
+
+.service-content-messages {
+	/*width: 100%;*/
+	max-width: 100%;
+	padding: 50px;
+	position: relative;
+	border:1px solid #ccc;
+	border-radius: 5px;	
+	overflow-y: auto;
+	overflow-x: hidden;
+	min-height:300px;
+	height: 350px!important;
+}
+
+.service-content-messages::-webkit-scrollbar {
+    width: 8px;
+}
+.service-content-messages::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    padding: 0 5px;
+}
+.service-content-messages::-webkit-scrollbar-thumb {
+    background-color: #999;
+    outline: 1px solid #3b0760;
+}
+.service-content-messages::-webkit-scrollbar-thumb:hover {
+	background-color: var(--color-gray);
+}
+
+.service-content-messages .service-box {
+	background-color: #fcfcfc;
+	width: 100%;
+	min-height: 80vh;
+	overflow-y:auto;
+	border-radius: 10px;
+	box-shadow: inset 0 0 10px rgba(0,0,0,.1);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.reply-btn {
+	padding: 15px 45px;
+	border:none;
+	outline: none;
+	color: #fff;
+	cursor: pointer;
+	font-weight: bold;
+}
+.reply-btn.yes {
+	background-color: #1dd1a1;
+}
+.reply-btn.yes:hover {
+	background-color: #10ac84;
+}
+
+.reply-btn.no {
+	background-color: #ee5253;
+}
+
+.reply-btn.no:hover {
+	background-color: red;
+}
+
+.messages {
+	display: flex;
+	flex-direction: column;		
+	align-items: flex-start;
+	max-height: 400px;
+	width: 100%!important;
+	padding: 10px 0;
+}
+
+.messages .message {
+	background-color: var(--color-primary);
+	color: #fff;
+	display: inline-block;
+	padding: 10px 20px;
+	max-width: 350px;
+	position: relative;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	user-select: none;
+	line-height: 1.2;
+	font-size: .9em;
+}
+.messages .message li {
+	margin-bottom: 10px;
+}
+.messages .message.message-from-you {
+	border-top-right-radius: 5px;
+}
+.messages .message.message-from-me {
+	border-top-left-radius: 5px;
+	align-self: flex-end;
+	background-color: #ede3fc;
+	color: #000;
+}
+
+.messages .message:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+.messages .message.message-from-you::before {
+	content:'';
+	position: absolute;
+	top: 0;
+	left: -20px;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid var(--color-primary);
+	border-bottom:10px solid transparent;
+}
+
+.messages .message.message-from-me::after {
+	content:'';
+	position: absolute;
+	top: 0;
+	right: -20px;
+	display: inline-block;
+	width: 0;
+	height: 0;
+	border-left: 10px solid #ede3fc;
+	border-right: 10px solid transparent;
+	border-bottom:10px solid transparent;
+}
+
+.message-form {
+	/*padding: 10px;*/
+}
+.message-form form {
+	width: 100%;
+	margin-top: 10px;
+	display: flex;
+	height: 100px;
+	border-radius: 5px;
+	overflow:hidden!important;
+}
+.message-form form textarea {
+	width: 100%;
+	padding: 10px;
+	border:1px solid #ccc;
+	border-radius: 5px;
+	
+	font-family: var(--font-family);
+	outline: none;
+	background-color: #f9f9f9;
+	transition:all .3s ease;
+	resize: none;
+}
+.message-form form textarea:hover,
+.message-form form textarea:focus {
+	background-color: #fff;
+	border:1px solid #888;
+}
+.message-form form button[type="submit"] {
+	width: 60px;
+	background-color: var(--color-primary);
+	color: #fff;
+	border:none;
+	user-select: none;
+	transition:all .3s ease;
+}
+.message-form form button[type="submit"] .fa {
+	transition:all .3s ease;
+}
+.message-form form button[type="submit"]:hover {
+	cursor: pointer;
+}
+.message-form form button[type="submit"]:hover .fa {
+	transform:scale(1.8);
+}
+
+.messages .message-buttons {
+	margin: 10px 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-wrap: wrap;
+}
+
+.messages .message-buttons button {
+	min-height: 40px;
+	min-width: 100px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 20px;
+	border:none;
+	border-radius: 10px;
+	outline: none;
+	background-color: #f5f5f5;
+	border:1px solid transparent;
+	margin-bottom: 5px;
+	opacity: .9;
+	user-select: none;
+	transition:background-color .3s ease, opacity .3s ease;
+}
+.messages .message-buttons button:not(:last-child) {
+	margin-right: 5px;
+}
+.messages .message-buttons button:hover {
+	opacity: 1;
+	cursor: pointer;
+	background-color: #f0f0f0;
+	box-shadow: 1px 1px 2px rgba(0,0,0,.6);
+}
+.messages .message-buttons button:first-child {
+	/*border-right:1px solid #ccc;*/
+}
+
+.messages .message-categories {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: flex-start;
+}
+
+.messages .message-categories button {
+	min-height: 40px;
+	min-width: 100px;
+	text-transform: uppercase;
+	background-color: transparent;
+	border:1px solid #ccc;
+	outline: none;
+	color: #000;
+	padding: 0 10px;
+	margin-bottom: 10px;
+	border-radius: 100px;
+	font-family: var(--font-family);
+}
+.messages .message-categories button:hover {
+	background-color: #f5f5f5;
+	cursor: pointer;
+}
+.messages .message-categories button:focus {
+	background-color: var(--color-primary);
+	color:#fff;
+}
+.messages .message-categories button:not(:last-child) {
+	margin-right: 5px;
+}
+
+
+.fade-enter, .fade-leave-to {
+	transform:translateX(100px);
+	opacity: 0;
+}
+
+.fade-enter-to, .fade-leave {
+	transform:translateX(0);
+	opacity: 1;
+}
+
+.fade-enter-active, .fade-leave-active {
+	transition:transform 2s ease, opacity 2s ease;
+}
+
+.main-loader {
+	position: fixed;
+	display: block;
+	z-index: 100000;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow:hidden!important;
+	background: url(../images/loader.gif) #fff;
+	background-repeat: no-repeat;
+	background-position: center center;
+}

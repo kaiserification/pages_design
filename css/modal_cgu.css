@@ -1,0 +1,115 @@
+.modal-cgu-overlay {
+	position: fixed;
+	z-index: 400000;
+	width: 100%;
+	height: 100vh;
+	background-color: rgba(0,0,0,.8);
+	overflow-y: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+/* Scroll bar */
+.modal-cgu-overlay::-webkit-scrollbar {
+    width: 15px;
+}
+
+/* Track */
+.modal-cgu-overlay::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+
+/* Handle */
+.modal-cgu-overlay::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+}
+
+.modal-cgu-overlay::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary-dark);
+}
+
+.modal-cgu {
+	width: 600px;
+	max-width: 80%;
+	min-height: 60vh;
+	background-color: #fff;
+	display: flex;
+	flex-direction: column;
+}
+.modal-cgu-header {
+	height: 80px;
+	background-color: var(--color-primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.6em;
+	border-bottom: 1px solid #ccc;
+}
+
+.modal-cgu-heading {
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.modal-cgu-body {
+	padding: 20px;
+	flex:1;
+}
+
+.modal-cgu-body .accept-button {
+	text-decoration: none;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--color-primary);
+	color: #fff;
+	height: 40px;
+	padding: 0 40px;
+	font-weight: bold;
+	border-radius: 40px;
+	transition:all .3s ease;
+}
+.modal-cgu-body .accept-button:hover {
+	background-color: #fff;
+	color: var(--color-primary);
+	border:1px solid var(--color-primary);
+}
+
+.modal-cgu-body p {
+	line-height: 1.4;
+}
+
+.modal-cgu-footer {
+	min-height: 80px;
+	background-color: var(--color-primary);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0 20px;
+}
+.modal-cgu-footer button {
+	background-color: #fff;
+	color: var(--color-primary);
+	height: 50px;
+	padding: 0 10px;
+	text-transform: uppercase;
+	border:1px solid transparent;
+	font-family: var(--font-family);
+	outline: none;
+	cursor: pointer;
+	font-weight: bold;
+	transition:.3s;
+}
+
+.modal-cgu-footer button:hover {
+	background-color: var(--color-primary-dark);
+	color: #fff;
+	border-color: #fff;
+}
+.modal-cgu-footer button:focus {
+	box-shadow: 0 0 0 .25rem rgba(255, 255, 255, .6);
+}
+.subtitle {
+	color: var(--color-primary-dark);
+}

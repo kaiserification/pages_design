@@ -1,0 +1,54 @@
+.how-it-works .video img {
+	display: block;
+	width: 100%;
+}
+
+.how-it-works {
+	opacity: 1;
+	transform:translateX(0);
+	transition:transform .4s, opacity .4s;
+
+
+	background-color: var(--color-primary);
+	clip-path: polygon(0 9%, 100% 0, 100% 91%, 0% 100%);
+
+
+	padding: 80px 10px;
+	color: #fff;
+
+	position: relative;
+}
+
+.how-it-works div {
+}
+
+.how-it-works .button {
+	display: inline-block;
+	background-color: #fff;
+	border-radius: 10px;
+	color: var(--color-primary);
+	padding: 10px 20px;
+	text-decoration: none;
+	font-weight: bold;
+	text-transform: uppercase;
+	border:1px solid transparent;
+	transition:.3s;
+}
+.how-it-works .button:hover {
+	border:1px solid #ccc;
+	background-color: var(--color-primary);
+	color: #fff;
+}
+
+
+.how-it-works.not-visible {
+	opacity: 0;
+	transform:translateX(20px);
+}
+
+.how-it-works .description {
+	text-align: justify;
+	line-height: 1.6;
+}
+
+

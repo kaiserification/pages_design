@@ -1,0 +1,81 @@
+.list__group {
+	list-style:none;
+	margin: 0;
+	padding: 0;
+	border:1px solid #ccc;
+}
+
+.list__group .list__group__item {
+	padding: 8px 5px;
+	font-size: .8em;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	user-select: none;
+}
+.list__group .list__group__item .list__badge {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	height:20px;
+	border-radius: 20px;
+	padding: 0 10px;
+	background-color: #712796;
+}
+.list__group .list__group__item:not(:last-child) {
+	border-bottom: 1px solid #ccc;
+}
+
+.list__group__item--hidden {
+	width: 0;
+	overflow:hidden;
+}
+
+.checkout__group {
+	display: flex;
+	flex-direction: column;
+}
+.checkout__group .checkout__item {
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-between;
+	margin-bottom: 5px;
+	user-select: none;
+}
+
+.checkout__item .checkout__image {
+	width: 70px;
+	height: 70px;
+}
+.checkout__item .checkout__image img {
+	width: 100%;
+	object-fit: contain;
+	object-position: center center;
+}
+.checkout__item .checkout__name {
+	font-size: .8em;
+	text-align: center;
+}
+.checkout__item .checkout__name .checkout__price {
+	display: inline-block;
+	font-size: 1.4em;
+	margin-top: 5px;
+	font-weight: bold;
+}
+.checkout__item .checkout__count {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.checkout__item .checkout__count span {
+	display: inline-block;
+	padding: 5px;
+	line-height: 20px;
+	font-size: .7em;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	background-color: #262626;
+}

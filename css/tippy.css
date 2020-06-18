@@ -1,0 +1,31 @@
+.tippy {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 10000;
+	padding: 3px 10px;
+	background-color: #222;
+	color:#fff;
+	font-size: .8em;
+	max-width: 400px;
+	border-radius: 5px;
+	opacity: 0;
+	transform:translateY(10px);
+	transition:opacity .3s ease, transform .5s ease;
+}
+
+.tippy.visible {
+	opacity: 1;
+	transform:translateY(0);
+}
+
+.tippy::after {
+	content:'';
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -6px;
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #222;
+}

@@ -1,0 +1,139 @@
+.comments {
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	align-items: flex-start;
+	margin: -10px;
+	padding: 10px;
+}
+.comments > .comment:not(:last-child) {
+	margin-bottom: 10px;
+}
+.comments.response-comments > .comment:not(:last-child) {
+	margin-bottom: none!important;
+}
+.comments .comment {
+	padding: 10px;
+}
+.comments .comment:hover {
+	background-color: #f5f5f5;
+}
+
+
+.comments .comment {
+	display: flex;
+	width: 100%;
+	align-items: center;
+	padding-bottom: 10px;
+}
+.comments.response-comments {
+	margin-top: -20px;
+}
+.comments.response-comments .comment .comment-message {
+	font-size: .85em!important;
+}
+
+.comments .comment .comment--avatar {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+}
+.comments .comment .comment--avatar img {
+	width: 100%;
+	border-radius: 50%;
+}
+.comments.response-comments .comment .comment--avatar {
+	width: 50px;
+	height: 50px;
+}
+.comments.response-comments .comment .comment-name {
+	font-weight: bold;
+	font-size: .8em!important;
+}
+
+.comments .comment .comment-content {
+	display: flex;
+	flex-direction: column;
+}
+
+.comments .comment .comment-name {
+	font-weight: bold;
+	font-size: 1em;
+}
+.comments .comment .comment-meta {
+	font-size: .7em;
+	font-weight: bold;
+}
+.comments .comment .comment-message {
+	width: 70%;
+}
+.comments .comment .reply-btn {
+	text-decoration: none;
+	color: inherit;
+	display: flex;
+	align-items: center;
+	font-size: .6em;
+	color: #888;
+	width: 100px;
+	font-weight: bold;
+	transition:color .3s;
+}
+.comments .comment .reply-btn:hover {
+	color: #000;
+}
+
+.comment-form .comment-field .comment-input {
+	width: 100%;
+	padding: 10px 0;
+	border:none;
+	font-family: var(--font-family);
+	outline: none;
+	resize: none;
+	font-size: .9em;
+	height: 40px;
+	background-color: transparent;
+}
+.comment-form .comment-field {
+	position: relative;
+}
+
+.comment-form .comment-field::after {
+	content:'';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background-color: #000;
+	transform:scaleX(0);
+	transform-origin: left;
+	transition:transform .3s;
+}
+
+.comment-form .comment-field::before {
+	content:'';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 2px;
+	width: 100%;
+	background-color: #ddd;
+	transition:transform .3s;
+}
+
+.comment-form .comment-field.focused::after {
+	transform:scaleX(1);
+}
+
+.comment-actions {
+	padding: 10px 0;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+.comment-content, .comment-content .comment-message {
+	width: 100%;
+}

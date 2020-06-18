@@ -1,0 +1,98 @@
+.order__items {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-gap: 15px;
+	margin: 10px 0;
+}
+
+.order__items .order__item {
+	background-color: #fff;
+	border:1px solid #ccc;
+	box-shadow: 0 10px 10px rgba(0,0,0,.2);
+	border-left: 2px solid #222;
+}
+
+.order__items--header {
+	padding: 0 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 40px;
+	border-bottom: 1px solid #ccc;
+}
+
+.order__items--body {
+	padding: 10px;
+}
+
+.order__items--list {
+	display: flex;
+	flex-direction: column;
+}
+
+.order__items--list li {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.order__items--list li:not(:last-child) {
+	margin-bottom: 15px;
+}
+.order__items--list li .label {
+	font-weight: bold;
+}
+.order__items--footer {
+	padding: 0 10px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+}
+.order__items--progress {
+	height: 2px;
+	background-color: #ccc;
+	border-radius: 10px;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.order__items--progress span {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-radius: 10px;
+	background-color: #ccc;
+	transform:scale(1.9);
+}
+
+.order__items--progress.progress--1 span:first-child {
+	background-color: green;
+}
+
+.order__items--progress.progress--2 span:first-child,
+.order__items--progress.progress--2 span:nth-child(2) {
+	background-color: green;
+}
+
+.order__items--progress.progress--3 span:first-child,
+.order__items--progress.progress--3 span:nth-child(2),
+.order__items--progress.progress--3 span:nth-child(3) {
+	background-color: green;
+}
+
+.order__items--progress.progress--4 span:first-child,
+.order__items--progress.progress--4 span:nth-child(2),
+.order__items--progress.progress--4 span:nth-child(3),
+.order__items--progress.progress--4 span:nth-child(4) {
+	background-color: green;
+}
+
+.order__items--progress.progress--5 span:first-child,
+.order__items--progress.progress--5 span:nth-child(2),
+.order__items--progress.progress--5 span:nth-child(3),
+.order__items--progress.progress--5 span:nth-child(4),
+.order__items--progress.progress--5 span:nth-child(5) {
+	background-color: green;
+}

@@ -1,0 +1,23 @@
+.badges {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.badges .badge {
+	text-decoration:none;
+	width: max-content;
+	padding: 8px 20px;
+	border-radius: 60px;
+	border:1px solid var(--blue-bootstrap);
+	color: var(--blue-bootstrap);
+	margin-right: 10px;
+	margin-bottom: 10px;
+	font-size: .7em;
+	font-weight: bold;
+	transition:.3s;
+}
+.badges .badge:hover,
+.badges .badge:focus {
+	background-color: var(--blue-bootstrap);
+	color: #fff;
+}

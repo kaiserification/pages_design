@@ -1,0 +1,18 @@
+.collapser {
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 0 auto 10px auto;
+	width: 50%;
+	text-align: center;
+	text-decoration: none;
+	color: inherit;
+	background-color: #000;
+	color: #fff;
+}
+
+.collapse {
+	display: none;
+}
+.collapse.show {
+	display: block;
+}

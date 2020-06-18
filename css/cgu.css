@@ -1,0 +1,32 @@
+.paragraph-container {
+	font-size: 1.3em;
+}
+
+.lists {
+	list-style: none;
+}
+
+.lists li {
+	margin-bottom: 10px;
+	display: flex;
+	flex-direction: column;
+}
+.lists li span {
+	display: block;
+}
+.lists li span.label {
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: .7em;
+}
+.lists li span.value {
+	font-size: .9em;
+}
+
+.title {
+	background-color: #f7fcfc;
+	font-size: 1em;
+	padding: 10px 5px;
+	text-transform: uppercase;
+	color: #000;
+}

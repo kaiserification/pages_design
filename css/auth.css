@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+:root {
+    --color-primary: #440656;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: Nunito, 'Segoe UI', sans-serif;
+    font-size: 16px;
+}
+
+.user--form {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-primary);
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.user--form::before {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    bottom: 2px;
+    width: 50%;
+    background-color: rgba(255, 255, 255, .05);
+}
+
+.user--form--title {
+    color: inherit;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-bottom: 30px;
+    font-size: 1.3em;
+}
+
+.control-label {
+    color: inherit;
+    display: block;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+    font-size: .815em;
+}
+
+.user--form form {
+    position: relative;
+    width: 350px;
+    height: auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 1);
+    z-index: 2;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, .5);
+}
+
+.user--form form::after {
+    content: '';
+    z-index: -1;
+    transform: translateY(5px) scaleX(1);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, .7);
+}
+
+.user--form form::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -80px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-image: url(../images/logo_sma.png);
+    background-position: center center;
+    background-size: 60px;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+}
+
+.btn {
+    display: block;
+    text-decoration: none;
+    height: 35px;
+    min-width: 50%;
+    border: none;
+    outline: none;
+    text-transform: uppercase;
+    font-size: .8em;
+    cursor: pointer;
+    user-select: none;
+    transition: .3s;
+    position: relative;
+}
+
+.btn.submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0px 10px rgba(0, 0, 0, .2);
+}
+
+.btn.submit:active {
+    transform: translateY(0);
+}
+
+.btn.submit::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 50%;
+    background-color: rgba(255, 255, 255, .1);
+}
+
+.btn-link {
+    width: 100%;
+    color: #000;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.input-group {
+    height: 35px;
+    line-height: 35px;
+    display: flex;
+    padding: 0 10px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+    border: 1px solid transparent;
+    transition: .3s;
+}
+
+.input-group.focused {
+    background-color: #fff;
+    border: 1px solid var(--color-primary);
+}
+
+.input-group:not(:last-child) {
+    margin-bottom: 15px;
+}
+
+.input-group .form-control {
+    border: none;
+    outline: none;
+    flex: 1;
+    background-color: transparent;
+    color: inherit;
+    -wekit-appearance: none;
+    appearance: none;
+}
+
+.input-group .form-control::placeholder {
+    color: inherit;
+}
+
+.feather {
+    width: 15px;
+    height: 15px;
+    stroke: #000;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    fill: none;
+    margin: 0;
+    margin-right: 10px;
+}
+
+.form-check {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.form-check * {
+    cursor: pointer;
+    user-select: none;
+}
+
+.form-check-label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.form-check-input {
+    width: 30px;
+    height: 15px;
+    line-height: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: #ccc;
+    border: none;
+    outline: none;
+    transform: translateY(1px);
+    border-radius: 20px;
+    margin-right: 10px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .5);
+    vertical-align: middle;
+    position: relative;
+    transition: .2s;
+    transition-delay: .1s;
+}
+
+.form-check-input::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 15px;
+    transform: scale(1.2);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .7);
+    transition: .3s;
+}
+
+.form-check-input:checked {
+    background-color: var(--color-primary);
+}
+
+.form-check-input:checked::after {
+    left: 15px;
+}
+
+.btn-block {
+    width: 100%;
+}
+
+button.input-group-append {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+button.input-group-append i {
+    pointer-events: none;
+    font-size: 1.2em;
+}
+
+.animated-checkbox {
+    width: 100%;
+    position: relative;
+}
+
+.animated-checkbox {
+    -webkit-appearance:none!important;
+    appearance:none!important;
+    width: 30px!important;
+    height: 30px!important;
+}

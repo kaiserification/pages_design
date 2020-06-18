@@ -1,0 +1,67 @@
+.notifier {
+    position: fixed;
+    z-index: 9000;
+    right: 10px;
+    top: 20px;
+    width: 30%;
+    min-height: 100px;
+    padding: 30px;
+    color: #000;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    border: 1px solid #eee;
+    font-size: 1.1em;
+}
+
+.notifier .notifier__header {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.notifier__default {
+    border: 1px solid #ccc;
+}
+
+.notifier__success {
+    color: #fff;
+    background-color: green;
+}
+
+.notifier__danger {
+    color: #fff;
+    background-color: red;
+}
+
+.notifier .notifier__closer {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, .3);
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1);
+}
+
+.notifier .notifier__closer:hover {
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.notifier__message {
+    display: flex;
+    align-items: center;
+}
+
+.notifier__message i {
+    font-size: 1.6em;
+    margin-right: 10px;
+}

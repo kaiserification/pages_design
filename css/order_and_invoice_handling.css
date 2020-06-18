@@ -1,0 +1,59 @@
+table {
+    counter-reset: tableCount;
+}
+
+.counterCell:before {
+    content: counter(tableCount);
+    counter-increment: tableCount;
+}
+
+.bg-dark {
+    background-color: #000;
+    color: #fff;
+}
+
+label[for="upload_csv"]+input {
+    display: none;
+}
+
+label[for="upload_csv"] {
+    width: 100%;
+    height: 200px;
+    line-height: 200px;
+    border: 2px dashed #ccc;
+    font-size: 1.4em;
+    text-align: center;
+    cursor: pointer;
+    color: #1abc9c;
+    border: 2px dashed#1abc9c;
+    transition: all ease .3s;
+}
+
+label[for="upload_csv"]:focus,
+label[for="upload_csv"]:active {
+    border: 2px dashed#1abc9c;
+}
+
+label[for="upload_csv"]:hover {
+    background-color: #1abc9c;
+    opacity: .6;
+    border: 2px dashed #fff;
+    color: #fff;
+}
+/*
+.upload-btn {
+    padding: 12px 50px;
+    font-size: 1.3em;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: #1abc9c;
+    color: #fff;
+    text-transform: uppercase;
+}*/
+
+#tracking-table thead tr th {}
+
+.table-responsive table thead tr th {
+    font-size: .9em;
+}

@@ -1,0 +1,116 @@
+.landing-wrapper {
+	width: 100%;
+	margin: 20px auto;
+	height: 450px;
+	background-color: #fff;
+	display: flex;
+	justify-content: space-between;
+	box-shadow: 0 2px 40px rgba(0,0,0, .2);
+	font-family: Nunito, sans-serif;
+}
+
+.landing-wrapper .landing-left-img{
+	display: flex;
+	width: 60%;
+}
+
+.landing-wrapper .landing-right-form {
+	width: 40%;
+	padding: 20px;
+}
+
+.landing-panel {
+	width: 100%;
+	margin: 20px 0;
+	height: 60px;
+	background-color: #fff;
+	display: flex;
+	text-transform: uppercase;
+	font-size: 1.3em;
+	font-weight: 700;
+	align-items: center;
+	padding:0 20px;
+	box-shadow: 0 2px 40px rgba(0,0,0, .2);
+}
+
+.landing-form-title {
+	margin-bottom: 20px;
+	text-transform: uppercase;
+	font-family: Nunito, sans-serif;	
+}
+
+.shakeit {
+	animation:shakeit 2s linear infinite;
+}
+
+@keyframes shakeit {
+	0% {
+		transform:scale(.96);
+	}
+	50% {
+		transform:scale(1);
+	}
+	100% {
+		transform:scale(.96);
+	}
+=======
+    width: 100%;
+    margin: 20px auto;
+    height: 450px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 2px 40px rgba(0, 0, 0, .2);
+    font-family: Nunito, sans-serif;
+}
+
+.landing-wrapper .landing-left-img {
+    display: flex;
+    width: 60%;
+}
+
+.landing-wrapper .landing-right-form {
+    width: 40%;
+    padding: 20px;
+}
+
+.landing-panel {
+    width: 100%;
+    margin: 20px 0;
+    height: 60px;
+    background-color: #fff;
+    display: flex;
+    text-transform: uppercase;
+    font-size: 1.3em;
+    font-weight: 700;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: 0 2px 40px rgba(0, 0, 0, .2);
+}
+
+.landing-form-title {
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-family: Nunito, sans-serif;
+}
+
+.shakeit {
+    animation: shakeit 2s linear infinite;
+}
+
+.confidential-politic {
+    text-decoration: underline !important;
+    font-size: 1.2em;
+}
+
+@keyframes shakeit {
+    0% {
+        transform: scale(.96);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(.96);
+    }
+}

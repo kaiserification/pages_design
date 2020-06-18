@@ -1,0 +1,47 @@
+.checkbox-square-list {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.form-codepromo-heading {
+	background-color: #555;
+	color: #fff;
+	font-size: 1em;
+	text-transform: uppercase;
+	text-align: center;
+	height: 40px;
+	line-height: 40px;
+}
+
+.checkbox-square-list input {
+	-webkit-appearance:none;
+	display: block;
+	width: 100%;
+	height: 40px;
+	border-right:1px solid #ccc;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #ccc;
+	position: relative;
+	cursor: pointer;
+	font-family: var(--font-family);
+	outline: none;
+}
+
+.checkbox-square-list input:checked {
+	background-color: #555;
+	color: #fff;
+	font-weight: bold;
+}
+
+.checkbox-square-list input:first-child {
+	border-left: 1px solid #ccc;
+}
+
+.checkbox-square-list input::before {
+	content:attr(data-text);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform:translate(-50%, -50%);
+	text-transform: uppercase;
+}

@@ -1,0 +1,30 @@
+.bread__crumb {
+	display: flex;
+	align-items: baseline;
+	font-size: .9em;
+	list-style: none;
+	color: inherit;
+	width: 100%;
+	padding: 10px 0;
+}
+.bread__crumb li {
+	color: #000;
+}
+
+.bread__crumb li a {
+	font-weight: bold;
+	letter-spacing: 1px;
+	text-decoration:none;
+	color: #000;
+}
+.bread__crumb li a:hover {
+	text-decoration:underline;
+}
+
+
+.bread__crumb li:not(:last-child)::after {
+	display: inline-block;
+	margin:0 10px;
+	content:'>';
+	font-size: 1.5em!important;
+}

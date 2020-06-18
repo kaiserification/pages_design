@@ -1,0 +1,32 @@
+.conf-panel-heading {
+    background-color: #fff;
+    height: 60px;
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    border-left: 3px solid #3b0760;
+}
+
+.conf-panel-body {
+    background-color: #fff;
+    padding: 10px;
+    border-left: 3px solid #3b0760;
+}
+.paragraph {
+    margin-bottom: 10px;
+}
+
+.list-with-icons li {
+    display: flex;
+    align-items: center;
+}
+.list-with-icons li span {
+    display: inline-block;
+}
+.list-with-icons li span:first-child {
+    width: 30px;
+}
+.list-with-icons li span:last-child {
+    flex:1;
+}

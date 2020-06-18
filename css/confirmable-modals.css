@@ -1,0 +1,103 @@
+.confirmable-overlay {
+	position: fixed;
+	z-index: 12000;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0,0,0,.4);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;	
+
+	opacity: 0;
+	pointer-events: none;
+	transform:translateY(-20px);
+	transition:all ease .3s;
+}
+
+.confirmable-overlay.show {
+	pointer-events: all;
+	transform:translateY(0);
+	opacity: 1;
+}
+
+.confirmable-modal {
+	width: 550px;
+	min-height: 350px;
+	background-color: #fff;
+
+	display: flex;
+	flex-direction: column;
+	border:5px solid var(--color-primary);
+}
+
+.confirmable-modal .confirmable-modal-title {
+	font-size: 1.1em;
+	text-align: center;
+}
+.confirmable-modal .confirmable-modal-close {
+	margin-left: auto;
+	background: none;
+	outline: none;
+	border: none;
+	appearance:none;
+	-webkit-appearance:none;
+	font-size: 1.4em;
+	cursor: pointer;
+	user-select: none;
+}
+
+.confirmable-modal .confirmable-modal-header {
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 10px;
+}
+
+.confirmable-modal .confirmable-modal-footer {
+	padding: 5px 10px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+.confirmable-modal .confirmable-modal-footer a:first-child {
+	background-color: var(--color-primary-lightest);
+	color: var(--color-primary);
+	width: 100%;
+}
+
+.confirmable-modal .confirmable-modal-body {
+	flex:1;
+	padding: 20px 10px;
+}
+
+.confirmable-modal .confirmable-modal-body .qty-modifier {
+	min-width: 200px;
+	border:1px solid #ccc;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.confirmable-modal .confirmable-modal-body .qty-modifier button {
+	width: 40px;
+	height: 40px;
+	background: none;
+	border: none;
+	background-color: #fff;
+	cursor: pointer;
+}
+.confirmable-modal .confirmable-modal-body .qty-modifier button.minus {
+	border-right:1px solid #ccc;
+}
+
+.confirmable-modal .confirmable-modal-body .qty-modifier button.plus {
+	border-left: 1px solid #ccc;
+}
+
+.confirmable-modal .confirmable-modal-body .qty-modifier button:focus {
+	box-shadow: 0 0 0 .25em rgba(168, 118, 204, .5);
+}

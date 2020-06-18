@@ -1,0 +1,277 @@
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .header {
+        width: 100%;
+    }
+    
+    .container .header .head {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #f1f2f6;
+        padding: 0px 10px;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0
+    }
+    
+    .container .header .head button {
+        padding: 10px 50px;
+        cursor: pointer;
+        font-size: 1.1em;
+    }
+    
+    .container .header .head h3 {
+        display: inline;
+    }
+    
+    .logo {
+        padding: 10px 0;
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+    }
+    
+    .logo img {
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+    }
+    
+    .content {
+        width: 50%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .section {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .section-row {
+        display: flex;
+        align-items: center;
+    }
+    
+    .header .title {
+        text-align: center;
+    }
+    
+    .section-row .right p {
+        line-height: .9;
+    }
+    
+    .section-row .left {
+        margin-right: 30px;
+    }
+    
+    .section-row .left span {
+        font-weight: bold;
+        font-size: 18px;
+        display: inline-block;
+        width: 120px;
+    }
+    
+    .header .main {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+    
+    .commande {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid lightgrey;
+        padding: 10px 0;
+    }
+    
+    .commande-header {
+        display: flex;
+        align-items: flex-start;
+        padding: 0 10px;
+        margin-bottom: 10px;
+    }
+    
+    .commande-header div {
+        flex: 1;
+        text-align: center;
+    }
+    
+    .commande-header div p {
+        line-height: .9;
+    }
+    
+    .commande-header div .address {
+        font-size: .8em;
+        color: #555;
+        font-style: italic;
+    }
+    
+    .commande .table-content {
+        padding: 0 10px;
+    }
+    
+    .commande .table-content table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    .commande .table-content table thead th {
+        text-align: left;
+        padding-bottom: 5px;
+        font-weight: bold;
+        background-color: rgba(0, 0, 0, .8);
+        color: white;
+    }
+    
+    .commande .table-content table td,
+    .commande .table-content table th {
+        padding: 5px 10px;
+        border: 1px solid lightgrey;
+        color: black;
+    }
+    
+    .commande .table-content table tr:nth-child(even) {
+        background-color: #f1f2f6;
+    }
+    
+    .divider {
+        height: 1px;
+        background-color: #000;
+        width: 25%;
+        margin: 20px auto;
+    }
+    
+    .container .divider:last-child {
+        display: none !important;
+    }
+    
+    .total-quantity {
+        margin-top: 30px;
+        width: 100%;
+    }
+    
+    .total-quantity-row {
+        display: flex;
+        padding: 0 10px;
+        justify-content: space-between;
+        border: 1px solid #ccc;
+        align-items: center;
+    }
+    
+    .total-quantity-row .quantity {
+        font-size: 1.5em;
+    }
+    
+    .container .form .field:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    
+    .container .form {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        padding: 10px;
+    }
+    
+    .container .form .field {
+        flex: 1;
+    }
+    
+    .container .form button.submit {
+        background-color: rgba(0, 0, 0, .8);
+        width: 100%;
+        border: none;
+        outline: none;
+        height: 40px;
+        line-height: 40px;
+        text-align: center;
+        color: #fff;
+        font-size: 1.1em;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color ease .3s;
+    }
+    
+    .container .form button.submit:hover {
+        background-color: #000;
+    }
+    
+    .container .form button.submit:focus {
+        box-shadow: 0 0 0 .2rem rgba(38, 143, 255, .5);
+    }
+    
+    .container .form .field:not(:last-child) {
+        margin-right: 20px;
+    }
+    
+    .container .form .field label,
+    .container .form .field input {
+        display: block;
+        width: 100%;
+        font-weight: bold;
+    }
+    
+    .container .form .field input {
+        height: 40px;
+        padding: 10px 20px;
+        font-size: 1.2em;
+        font-family: Nunito, sans-serif;
+    }
+    
+    .text-center {
+        text-align: center !important
+    }
+    
+    .text-bold {
+        font-weight: bold !important;
+    }
+    /* MEDIA PRINT*/
+    
+    @media print {
+        .container {
+            width: 95%;
+        }
+        .divider {
+            display: none !important;
+        }
+        .container .header .head {
+            margin-bottom: -20px
+        }
+        .container .header .head h3 {
+            font-weight: lighter;
+        }
+        .container .header .title {
+            margin-bottom: -5px;
+        }
+        .section-row .right p {
+            line-height: 1;
+        }
+        .container .header .head button,
+        .container .form {
+            border: none !important;
+            display: none !important;
+        }
+        .commande .table-content table thead th {
+            color: #000;
+        }
+        body {
+            padding-top: 0 !important;
+        }
+        .container .header .head {
+            position: static
+        }
+        .commande {
+            margin-bottom: 7px;
+        }
+    }
+    /* END MEDIA PRINT*/
