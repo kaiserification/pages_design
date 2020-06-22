@@ -72,11 +72,13 @@
 	justify-content: space-between;
 	padding: 0 0 0 5px;
 	padding: 5px 0;
+	/*flex-wrap: wrap;*/
 }
 .footer .newsletter-form i.icon-form {
 	color:#000;
 	font-size: 1.2em;
 	margin-right: 10px;
+	/*flex-wrap: wrap;*/
 }
 
 .footer .newsletter-form input {
@@ -126,15 +128,15 @@
 
 .footer .footer-sections {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+	grid-template-columns: repeat(auto-fill, minmax(19%, 1fr));
 	grid-gap: 10px;
 }
 
 .footer .footer-sections .footer-section h3 {
 	font-family: inherit;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	/*border-bottom: 1px solid #fff;*/
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 	font-size: .8em;
 	font-weight: 700;
 }

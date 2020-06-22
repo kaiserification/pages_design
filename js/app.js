@@ -92,15 +92,15 @@ $(document).ready(function() {
         const target   = $(this).data('target');
         const href     = $(this).attr('href');
         const inputqty = $(this).data('inputqty'); 
-        showLoader();
-        $.get(href).done(function(data, status) {
-            $(target).addClass('show');
-            $(inputqty).empty().append(data.qty);
-            $('#has-cart-count').empty().append(cart_counter_html(data.count))
-            $('#cart-inner-content').empty().append(data.cart_navbar)
-        }).always(function(){
-            hideLoader();
-        });
+        // showLoader();
+        // $.get(href).done(function(data, status) {
+        //     $(target).addClass('show');
+        //     $(inputqty).empty().append(data.qty);
+        //     $('#has-cart-count').empty().append(cart_counter_html(data.count))
+        //     $('#cart-inner-content').empty().append(data.cart_navbar)
+        // }).always(function(){
+        //     hideLoader();
+        // });
     });
 
 
@@ -174,6 +174,31 @@ $(document).ready(function() {
 
 
     $('[data-toggle="dropdown"]').click(function(e) {
+        e.preventDefault()
+        e.stopPropagation()
+            // $('.navbar-menu-dropdown-box').removeClass('show');
+
+        $(this).parent().siblings('.navbar-menu-item').find('.navbar-menu-dropdown-box').removeClass('show')
+
+        let dropdownLinkClass = $(this).hasClass('navbar-menu-link')
+        const target = $(this).data('target')
+        $(target).toggleClass('show')
+
+
+        if ($(target).hasClass('show')) {
+            // $(this).addClass('outlined')
+            if (!dropdownLinkClass) {
+                $(target).siblings('[data-toggle="dropdown"]').find('i').addClass('rotate-half')
+            }
+        } else {
+            // $(this).removeClass('outlined')
+            if (!dropdownLinkClass) {
+                $(target).siblings('[data-toggle="dropdown"]').find('i').removeClass('rotate-half')
+            }
+        }
+    })
+
+    $('[data-toggle="dropdown1"]').click(function(e) {
         e.preventDefault()
         e.stopPropagation()
             // $('.navbar-menu-dropdown-box').removeClass('show');

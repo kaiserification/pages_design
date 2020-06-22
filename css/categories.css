@@ -156,7 +156,8 @@ li.active a {
 .slider-button {
   color: var(--color-primary);
   background-color: transparent;
-  border:1px solid var(--color-primary);
+  /*border:1px solid var(--color-primary);*/
+  border: none;
   width: 40px;
   height: 40px;
   display: flex;

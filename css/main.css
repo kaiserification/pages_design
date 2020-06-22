@@ -18,6 +18,10 @@
 	box-sizing: border-box;
 }
 
+#is-vue {
+	position: relative;
+}
+
 .rotateY {
 	transform: rotate(180deg);
 }
@@ -394,10 +398,10 @@ body::-webkit-scrollbar-thumb:hover {
 .fade-in {
 	animation:fadein .1s linear;
 }
-
+/*
 .mobile-body {
 	padding-top: 160px;
-}
+}*/
 
 .main-loader {
 	position: fixed;
