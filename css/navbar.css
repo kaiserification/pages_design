@@ -1,4 +1,4 @@
-.navbar {
+/*.navbar {
 	position: fixed;
 	z-index: 10000;
 	top: 0;
@@ -7,7 +7,7 @@
 	display: flex;
 	flex-direction: column;
 	background: #fff;
-}
+}*/
 .navbar .navbar-row {
 	display: flex;
 	align-items: center;
@@ -58,6 +58,7 @@
 	display: flex;
 	align-items: center;
 	margin-left: 100px;
+	margin-right: 20px;
 }
 .navbar .nav-orders-link a {
 	display: inline-block;
@@ -93,7 +94,7 @@
 }
 .navbar .navbar-row.for-contacts {
 	background-color: #3b0760;
-	background-color: var(--color-primary-lightest-2);
+	background-color: #d8cae6;
 	color: var(--color-primary);
 	border-bottom: none;
 	display: flex;
