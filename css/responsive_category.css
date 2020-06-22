@@ -14,20 +14,29 @@ h2.mb-5 {
 	max-width: 100%;
 }
 
+<<<<<<< HEAD
+=======
 
 
 
+>>>>>>> 99f1e6d470b1ae40e355728de57459300d7682e2
 @media (min-width: 1920px) and (max-width: 2560px) {
 
 }
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 99f1e6d470b1ae40e355728de57459300d7682e2
 @media screen and (max-width: 1440px) {
 
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 99f1e6d470b1ae40e355728de57459300d7682e2
 /* XL Device :1200px. */
 @media (min-width: 1200px) and (max-width: 1500px) {
 	
@@ -41,41 +50,62 @@ h2.mb-5 {
 
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 99f1e6d470b1ae40e355728de57459300d7682e2
 @media (max-width: 1140px) {
 
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 99f1e6d470b1ae40e355728de57459300d7682e2
 @media (max-width: 1024px) {
 
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 99f1e6d470b1ae40e355728de57459300d7682e2
 /* LG Device :992px. */
 @media (min-width: 992px) and (max-width: 1024px) {
 
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 99f1e6d470b1ae40e355728de57459300d7682e2
 /* Extra small Device. */
 @media (max-width: 991px) {
 
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 99f1e6d470b1ae40e355728de57459300d7682e2
 /* MD Device */
 @media (min-width: 768px) and (max-width: 991px) {
 margin-bottom: 15px;
     
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 99f1e6d470b1ae40e355728de57459300d7682e2
 @media screen and (max-width: 768px) {
 
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 99f1e6d470b1ae40e355728de57459300d7682e2
 /* SM Small Device */
 @media (min-width: 579px) and (max-width: 767px) {
 
@@ -85,7 +115,10 @@ margin-bottom: 15px;
 
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 99f1e6d470b1ae40e355728de57459300d7682e2
 @media (min-width: 479px) and (max-width: 575px) {
 
 }
@@ -106,8 +139,11 @@ margin-bottom: 15px;
 
 @media (max-width: 375px) {
 
+<<<<<<< HEAD
+=======
 
     
+>>>>>>> 99f1e6d470b1ae40e355728de57459300d7682e2
 }
 
 @media (min-width: 320px) and (max-width: 375px) {

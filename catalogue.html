@@ -37,11 +37,12 @@
 
     <!-- HOME PAGE CSS -->
     <link rel="stylesheet" href="css/home-page.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/responsive_category.css">
 
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="/js/blip.js"></script>
 </head>
 
 <body class="mobile-body">
@@ -66,74 +67,114 @@
                     <img src="images/logo_sma.png" alt="Logo ShopMeAway" title="Logo ShopMeAway">
                 </a>
 
-                <div class="nav-orders-link" style="margin-right:auto;">
-                    <a href="/passer-une-commande-perso">Commande PERSO</a>
-                    <a href="/passer-une-commande-comptoir-du-monde">Commande CDM</a>
+                <div class="nav-wrap d-flex justify-content-between align-items-center">
+                    <div class="nav-orders-link d-flex justify-content-between">
+                        <!-- <div class="nav-order-link-wrap d-flex"> -->
+                            <a href="/passer-une-commande-perso">Commande PERSO</a>
+                            <a href="/passer-une-commande-comptoir-du-monde">Commande CDM</a>
+                        <!-- </div> -->
+                    </div>
+                    <nav class="nav-auth d-mobile">
+                        <ul class="navbar-menu">
+                            <li class="navbar-menu-item with-dropdown">
+                                <a href="#" data-toggle="dropdown1" data-target="#devise-dropdown1" class="navbar-menu-link">
+                                    devise <i class="fa fa-angle-down ml-2"></i>
+                                </a>
+                                <div class="navbar-menu-dropdown-box" id="devise-dropdown1">
+                                    <a class="active prevent-click" href="/default-currency">Devise par défaut</a>
+                                    <a class="" href="/fcfa-currency">convertir en Francs FCFA</a>
+                                </div>
+                            </li>
+
+                            <li class="navbar-menu-item">
+                                <a href="/se-connecter" class="navbar-menu-link">Connexion</a>
+                            </li>
+
+                            <li class="navbar-menu-item position-relative" style="transform:translateY(-2px)">
+                                <a data-toggle="dropdown" data-target="#cart-inner-content" href="/mon-panier" id="has-cart-count" class="navbar-menu-link has-cart-count">
+                                    Panier <i class="fa-md ti-shopping-cart"></i>
+                                </a>
+
+                                <div class="cart-inner-content mt-20" id="cart-inner-content">
+                                    <div style="min-height: 80px;padding: 5px;" class="d-flex align-items-center justify-content-center flex-column">
+                                        <h4>Votre panier est actuellement vide</h4>
+                                        <img src="images/undraw_empty_cart_co35.png" alt="" style="width: 100px;height: 100px;object-fit:contain;user-select: none;">
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="/mon-panier" class="is-btn is-purple text-white rounded-sm">Voir le panier</a>
+                                        <a href="/catalogue-de-produits" class="is-btn is-purple text-white rounded-sm">Catalogue</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
 
-                <form method="get" class="nav-search ml-10" id="nav-search" action="/resultats-de-recherche">
-                    <div class="field">
-                        <div class="select">
-                            <button id="button-toggler" type="button" data-target="#options" data-toggle="select">
-                                <span>Catégorie</span>
-                                <span class="icon ti-angle-down"></span>
-                            </button>
-                            <div class="options" id="options">
-                                <a class="option" href="/catalogue-de-produits">Toutes les catégories</a>
+                <div class="form-wrap d-flex justify-content-between">
+                    <form method="get" class="nav-search ml-10" id="nav-search" action="/resultats-de-recherche">
+                        <div class="field">
+                            <div class="select">
+                                <button id="button-toggler" type="button" data-target="#options" data-toggle="select">
+                                    <span>Catégorie</span>
+                                    <span class="icon ti-angle-down"></span>
+                                </button>
+                                <div class="options" id="options">
+                                    <a class="option" href="/catalogue-de-produits">Toutes les catégories</a>
 
-                                <a class="option" href="/catalogue-de-produits?main_category=8&amp;slug=bricolages">Bricolages</a>
-                                <a class="option" href="/catalogue-de-produits?main_category=1&amp;slug=decorations">Décorations</a>
-                                <a class="option" href="/catalogue-de-produits?main_category=3&amp;slug=electronique">Electronique</a>
-                                <a class="option" href="/catalogue-de-produits?main_category=7&amp;slug=informatiques">Informatiques</a>
-                                <a class="option" href="/catalogue-de-produits?main_category=5&amp;slug=loisirs-et-jouets">Loisirs et Jouets</a>
-                                <a class="option" href="/catalogue-de-produits?main_category=6&amp;slug=mecaniques">Mécaniques</a>
+                                    <a class="option" href="/catalogue-de-produits?main_category=8&amp;slug=bricolages">Bricolages</a>
+                                    <a class="option" href="/catalogue-de-produits?main_category=1&amp;slug=decorations">Décorations</a>
+                                    <a class="option" href="/catalogue-de-produits?main_category=3&amp;slug=electronique">Electronique</a>
+                                    <a class="option" href="/catalogue-de-produits?main_category=7&amp;slug=informatiques">Informatiques</a>
+                                    <a class="option" href="/catalogue-de-produits?main_category=5&amp;slug=loisirs-et-jouets">Loisirs et Jouets</a>
+                                    <a class="option" href="/catalogue-de-produits?main_category=6&amp;slug=mecaniques">Mécaniques</a>
+                                </div>
                             </div>
+
+                            <div class="field-suggestions">
+                                <input type="text" name="recherche" id="recherche" value="" class="suggestionnable" data-target="#search-suggestion" placeholder="Rechercher un article qui vous plaît" autocomplete="off" required>
+                                <input type="hidden" name="category" value="">
+                            </div>
+                            <button type="submit" class="nav-search-submit"><i class="fa fa-search"></i></button>
                         </div>
+                    </form>
 
-                        <div class="field-suggestions">
-                            <input type="text" name="recherche" id="recherche" value="" class="suggestionnable" data-target="#search-suggestion" placeholder="Rechercher un article qui vous plaît" autocomplete="off" required>
-                            <input type="hidden" name="category" value="">
-                        </div>
-                        <button type="submit" class="nav-search-submit"><i class="fa fa-search"></i></button>
-                    </div>
-                </form>
+                    <nav class="nav-auth d-desktop">
+                        <ul class="navbar-menu">
+                            <li class="navbar-menu-item with-dropdown">
+                                <a href="#" data-toggle="dropdown" data-target="#devise-dropdown" class="navbar-menu-link">
+                                    devise <i class="fa fa-angle-down ml-2"></i>
+                                </a>
+                                <div class="navbar-menu-dropdown-box" id="devise-dropdown">
+                                    <a class="active prevent-click" href="/default-currency">Devise par défaut</a>
+                                    <a class="" href="/fcfa-currency">convertir en Francs FCFA</a>
+                                </div>
+                            </li>
 
-                <nav class="nav-auth">
-                    <ul class="navbar-menu">
-                        <li class="navbar-menu-item with-dropdown">
-                            <a href="#" data-toggle="dropdown" data-target="#devise-dropdown" class="navbar-menu-link">
-                                devise <i class="fa fa-angle-down ml-2"></i>
-                            </a>
-                            <div class="navbar-menu-dropdown-box" id="devise-dropdown">
-                                <a class="active prevent-click" href="/default-currency">Devise par défaut</a>
-                                <a class="" href="/fcfa-currency">convertir en Francs FCFA</a>
-                            </div>
-                        </li>
+                            <li class="navbar-menu-item">
+                                <a href="/se-connecter" class="navbar-menu-link">Connexion</a>
+                            </li>
 
-                        <li class="navbar-menu-item">
-                            <a href="/se-connecter" class="navbar-menu-link">Connexion</a>
-                        </li>
+                            <li class="navbar-menu-item position-relative" style="transform:translateY(-2px)">
+                                <a data-toggle="dropdown" data-target="#cart-inner-content" href="/mon-panier" id="has-cart-count" class="navbar-menu-link has-cart-count">
+                                    Panier <i class="fa-md ti-shopping-cart"></i>
+                                </a>
 
-                        <li class="navbar-menu-item position-relative" style="transform:translateY(-2px)">
-                            <a data-toggle="dropdown" data-target="#cart-inner-content" href="/mon-panier" id="has-cart-count" class="navbar-menu-link has-cart-count">
-                                Panier <i class="fa-md ti-shopping-cart"></i>
-                            </a>
+                                <div class="cart-inner-content mt-20" id="cart-inner-content">
+                                    <div style="min-height: 80px;padding: 5px;" class="d-flex align-items-center justify-content-center flex-column">
+                                        <h4>Votre panier est actuellement vide</h4>
+                                        <img src="images/undraw_empty_cart_co35.png" alt="" style="width: 100px;height: 100px;object-fit:contain;user-select: none;">
+                                    </div>
 
-                            <div class="cart-inner-content mt-20" id="cart-inner-content">
-                                <div style="min-height: 80px;padding: 5px;" class="d-flex align-items-center justify-content-center flex-column">
-                                <h4>Votre panier est actuellement vide</h4>
-                                <img src="images/undraw_empty_cart_co35.png" alt="" style="width: 100px;height: 100px;object-fit:contain;user-select: none;">
-                            </div>
-
-                            <div class="d-flex align-items-center justify-content-between">
-                                <a href="/mon-panier" class="is-btn is-purple text-white rounded-sm">Voir le panier</a>
-                                    <a href="/catalogue-de-produits" class="is-btn is-purple text-white rounded-sm">Catalogue</a>
-                            </div>
-
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <a href="/mon-panier" class="is-btn is-purple text-white rounded-sm">Voir le panier</a>
+                                        <a href="/catalogue-de-produits" class="is-btn is-purple text-white rounded-sm">Catalogue</a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
             <div class="navbar-row-categories" id="navbar-row-categories">
                 <div class="container">
@@ -209,8 +250,8 @@
             </div>
 
             <div class="navbar-row for-contacts">
-                <a class="active" aria-current="page" href="index.html">Accueil</a>
-                <a href="catalogue.html">Catalogue de produits</a>
+                <a class="active" aria-current="page" href="/catalogue">Accueil</a>
+                <a href="./categories.html">Catalogue de produits</a>
                 <a href="/utiliser-le-service">Utiliser nos services</a>
                 <a href="/fonctionnement">Fonctionnement</a>
                 <a href="/nos-adresses">Nos adresses</a>
@@ -240,7 +281,7 @@
                     </a>
                     <div class="lil-select ml-5 mr-5">
                         <button class="lil-select-toggler">
-                          Filtrer par devise <i class="fa fa-angle-down"></i>
+                          Filtrer par devise <i class="fa fa-angle-down fa-2x"></i>
                         </button>
 
                         <div class="lil-select-content">
@@ -267,7 +308,7 @@
                     <div>
                       <h2 class="d-flex align-items-center justify-content-between">
                         Filtrer par site web
-                        <button type="button" class="slider-button" data-target="#form_websites"><i class="fa fa-angle-down"></i></button>
+                        <button type="button" class="slider-button" data-target="#form_websites"><i class="fa fa-angle-down fa-2x"></i></button>
                       </h2>
                       <websites-filter 
                         selected_sort_price=""
@@ -301,7 +342,7 @@
                         </div>
 
                         <div class="row mt-20">
-                          <div class="col-md-12">
+                          <div class="col-md-12 price-slider-wrap">
                             <div id="price-slider" data-min="11" data-max="1000"></div>
                           </div>
                         </div>
@@ -323,11 +364,11 @@
 
                     <div class="products  mt-20">
                         <!-- PRODUCT ITEM 1 -->
-                        <div class="confirmable-overlay" id="add_to_cart_modal303">
+                        <div class="confirmable-overlay" id="add_to_cart_modal1330">
                             <div class="confirmable-modal">
                                 <div class="confirmable-modal-header text-center d-flex align-items-center justify-content-center" style="position: relative;">
                                     <h5 class="confirmable-modal-title">Ajouté au panier !</h5>
-                                    <button class="confirmable-modal-close" data-target="#add_to_cart_modal303" style="position: absolute;right: 10px;">
+                                    <button class="confirmable-modal-close" data-target="#add_to_cart_modal1330" style="position: absolute;right: 10px;">
                                         <i class="ti-close"></i>
                                     </button>
                                 </div>
@@ -343,11 +384,11 @@
                                         <div class="flex-1 text-right d-flex flex-column">
                                             <h3 class="align-self-end mb-10">1000.0 €</h3>
                                             <div class="qty-modifier">
-                                                <button data-toggle="qty-modifier" data-target="#qty-for-product-number-303" data-href="/cart/remove_one/303" class="minus"><i class="ti-minus"></i></button>
-                                                <span id="qty-for-product-number-303">
+                                                <button data-toggle="qty-modifier" data-target="#qty-for-product-number-330" data-href="/cart/remove_one/330" class="minus"><i class="ti-minus"></i></button>
+                                                <span id="qty-for-product-number-330">
                                                     1
                                                 </span>
-                                                <button data-toggle="qty-modifier" data-target="#qty-for-product-number-303" data-href="/cart/add/303" class="plus"><i class="ti-plus"></i></button>
+                                                <button data-toggle="qty-modifier" data-target="#qty-for-product-number-330" data-href="/cart/add/330" class="plus"><i class="ti-plus"></i></button>
                                             </div>
                                             <a href="/mon-panier" class="is-btn text-uppercase is-purple" style="margin-top: auto; font-size: .8em;">finaliser ma commande</a>
                                         </div>
@@ -355,7 +396,7 @@
                                 </div>
 
                                 <div class="confirmable-modal-footer">
-                                    <a href="#" class="is-btn text-uppercase is-purple modal-btn-close" data-target="#add_to_cart_modal303" style="font-size: .8em;">
+                                    <a href="#" class="is-btn text-uppercase is-purple modal-btn-close" data-target="#add_to_cart_modal330" style="font-size: .8em;">
                                         <i class="mdi mdi-undo"></i> Poursuivre mes achats
                                     </a> 
                                 </div>
@@ -364,12 +405,12 @@
 
                         <div class="product-item">
                           <div class="add-to-cart-slide">
-                            <a href="/cart/add/303" class="add-to-cart-btn" data-inputqty="#qty-for-product-number-303" data-target="#add_to_cart_modal303">
+                            <a href="javascript: ;" class="add-to-cart-btn" data-inputqty="#qty-for-product-number-330" data-target="#add_to_cart_modal330">
                               <span><i class="ti-shopping-cart"></i> Ajouter au panier</span>
                             </a>
                           </div>
 
-                          <a href="/products/un-nouveau-produit-de-test-303">
+                          <a href="/products/un-nouveau-produit-de-test-330">
                             <img src="https://picsum.photos/id/200/300/300" alt="Un nouveau produit de test" title="Un nouveau produit de test" class="product-img-top">
                           </a>
 
@@ -382,7 +423,7 @@
                             </div>
                           </div>
                           <span class="product-label">
-                             <img src="http://logo.clearbit.com/Amazon?size=50" alt="Amazon" title="Amazon">
+                             <img src="http://logo.clearbit.com/www.amazone.fr?size=50" alt="Amazon" title="Amazon">
                           </span>
                         </div>
                         <!-- END PRODUCT ITEM 1 -->
@@ -497,6 +538,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
     <script src="js/sma-components.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/modals.js"></script>
     <script src="js/alerter.js"></script>
     <script src="js/home-page.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/14.0.3/nouislider.min.js"></script>

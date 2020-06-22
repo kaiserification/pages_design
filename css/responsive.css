@@ -36,7 +36,10 @@
     position: relative;
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 99f1e6d470b1ae40e355728de57459300d7682e2
 @media (min-width: 1920px) and (max-width: 2560px) {
     .team-grids {
         display: grid;
@@ -45,8 +48,11 @@
     }
 }
 
+<<<<<<< HEAD
+=======
 
 
+>>>>>>> 99f1e6d470b1ae40e355728de57459300d7682e2
 @media screen and (max-width: 1440px) {
     .nav-search .field .select .options {
         width: 150px;
@@ -57,7 +63,10 @@
     }
 }
 
+<<<<<<< HEAD
+=======
 
+>>>>>>> 99f1e6d470b1ae40e355728de57459300d7682e2
 /* XL Device :1200px. */
 @media (min-width: 1200px) and (max-width: 1500px) {
 
@@ -103,7 +112,10 @@
         height: 400px;
         user-select: none;
         object-position: center;
+<<<<<<< HEAD
+=======
         /* object-fit: cover; */
+>>>>>>> 99f1e6d470b1ae40e355728de57459300d7682e2
     }
 }
 
@@ -159,7 +171,10 @@
     .focused-shadow {
         top: 103px;
     }
+<<<<<<< HEAD
+=======
 
+>>>>>>> 99f1e6d470b1ae40e355728de57459300d7682e2
 }
 
 
