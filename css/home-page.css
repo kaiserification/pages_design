@@ -162,7 +162,7 @@
 
 .slider__contact--content {
 	position: absolute;
-	top: 10%;
+	top: 14%;
 	left: 50%;
 	transform:translateX(-50%);
 	width: 85%;
@@ -178,6 +178,8 @@
 	list-style-type: none;
 	font-size: .9em;
 	line-height: 1.8;
+	margin-top: 1rem;
+	margin-top: 0;
 }
 .slider-contact .contact-list li{
 	margin-bottom: 15px;
@@ -189,10 +191,10 @@
 	font-size: .8em;
 }
 
-
 .slider-contact .contact-list li span.contact-list__label {
 	text-transform: uppercase;
-	
+	/* font-size: 18px; */
+	font-family: var(--font-family);
 }
 
 .slider-contact .contact-list li span.contact-list__value.with-social-links {
