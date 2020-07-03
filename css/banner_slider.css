@@ -1,0 +1,382 @@
+
+@font-face {
+	font-family: "mabry";
+	src: url("../fonts/Mabry-Pro-Black.ttf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "avenir";
+	src: url("../fonts/AvenirLTStd-Black.otf");
+	font-style: normal;
+	font-weight: normal;
+}
+
+.owl-carousel {
+	 max-width: 100%;
+}
+ .owl-carousel .owl-nav {
+	 padding-top: 0.4em;
+	 font-family: sans-serif;
+	 font-size: 0.8em;
+}
+ .owl-carousel .owl-nav > div {
+	 padding: 0.4em 1.4em;
+	 border: 1px solid #333;
+	 background: #000;
+	 color: white;
+	 border-radius: 0.4em;
+	 box-shadow: 0.1em 0.1em 0.4em rgba(0, 0, 0, .5);
+}
+ .owl-carousel .owl-nav > div:hover {
+	 background-color: #333;
+}
+ .owl-carousel .owl-nav .owl-prev {
+	 float: left;
+}
+ .owl-carousel .owl-nav .owl-next {
+	 float: right;
+}
+
+.container-fluid {
+	width: 100%;
+}
+
+.banner-slider .item {
+	height: 35vw;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.slitem01.desktop-background {
+	background-image: url("../uploads/slider/banner/Slider-banner-Africa/slider-banner-africa-editable_background.png");
+}
+
+.slitem02.desktop-background {
+	background-image: url("../uploads/slider/banner/Slider-banner-Europe/slider-banner-europe-editable_background.png");
+}
+
+.slitem03.desktop-background {
+	background-image: url("../uploads/slider/banner/Slider-banner-USA/slider-banner-usa-editable_background.png");
+}
+
+.slitem04.desktop-background {
+	background-image: url("../uploads/slider/banner/Slider-banner-China/slider-banner-china-editable_background.png");
+}
+
+.slider-africa-left {
+    height: 100%;
+    position: relative;
+}
+
+.slitem01 {
+	background-image: url("../uploads/slider/banner/Slider-banner-Africa/africa-background.png");
+}
+
+.slitem02 {
+	background-image: url("../uploads/slider/banner/Slider-banner-Europe/europe-background.png");
+}
+
+.slitem03 {
+	background-image: url("../uploads/slider/banner/Slider-banner-USA/us-background.png");
+}
+
+.slitem04 {
+	background-image: url("../uploads/slider/banner/Slider-banner-China/china-background.png");
+}
+
+/*Africa*/
+
+.slider-africa-left p {
+    font-size: 2.8vw;
+    color: white;
+    font-family: mabry;
+    text-transform: uppercase;
+    line-height: 1.3;
+    padding-left: 4.5vw;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.slider-africa-left p span {
+	color: #a25cb0;
+}
+
+.slider-left-logo {
+    position: absolute;
+    bottom: 1.2vw;
+    left: 1.2vw;
+    height: 5vw;
+    width: 5vw;
+}
+
+.slider-right-content {
+    right: 1.5vw;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+}
+
+.logo-row.logo-row01 {
+    width: 80%;
+    margin-left: auto;
+    margin-right: 25px;
+    margin-bottom: 25px;
+}
+
+.logo-wrap {
+    width: 12vw;
+}
+
+.owl-carousel .item img {
+	user-select: none;
+	object-position: center right;
+}
+
+.logo-wrap.logo-zara img {
+	max-width: 95%;
+}
+
+.logo-wrap.logo-nike img {
+	margin: auto;
+}
+
+.logo-wrap.logo-CalvinKlein {
+    margin-left: auto;
+    margin-right: 50px;
+    margin-top: 3vw;
+    margin-bottom: 3vw;
+}
+
+.logo-wrap.logo-CalvinKlein img {
+	max-width: 95%;
+}
+
+.logo-wrap.logo-amazon {
+    margin-left: 60%;
+}
+
+.logo-wrap.logo-disney img {
+	margin-top: -4vw;
+}
+
+.owl-carousel .item .logo-arrow img {
+    margin-left: -19%;
+    /*margin-bottom: 1%;*/
+/*	width: auto;
+	height: auto;
+	max-width: unset;
+	max-height: unset;*/
+}
+
+.many-more-africa {
+	position: absolute;
+	bottom: 1vw;
+	right: 1vw;	
+}
+
+.many-more-africa p {
+    font-size: 1.4vw;
+    font-family: mabry;
+    color: white;
+    text-align: right;
+    margin: 0;
+}
+
+.many-more p {
+    font-size: 1.3vw;
+    font-family: avenir;
+    color: white;	
+    text-align: right;
+}
+
+.item .row {
+    height: 100%;
+}
+
+.slider-africa-right {
+	position: relative;
+    height: 100%;
+}
+
+.logo-arrow {
+	position: absolute;
+    left: 0;
+    width: 40vw;
+}
+
+.logo-wrap.logo-ralphlauren img,
+.logo-wrap.logo-alibaba img {
+	margin-left: auto;
+}
+
+.banner-slider .slider-left-logo img {
+	max-width: 100%;
+}
+
+
+
+/*Europe*/
+
+.item .logo img {
+	width: initial;
+}
+
+.logo.mobile-logo {
+	position: absolute;
+}
+
+.banner-africa-right,
+.banner-europe-right,
+.banner-usa-right,
+.banner-china-right
+{
+	position: relative;
+	height: 100%;
+}
+
+.readmore {
+    position: absolute;
+    bottom: 1vw;
+    right: 0;
+}
+
+.readmore p {
+	font-size: 1.8vw;
+	font-family: mabry;
+	color: white;
+	text-align: right;
+	margin: 0;
+}
+
+.brand-wrapper {
+    position: absolute;
+    right: 0;
+    width: 90%;
+    top: 1.5vw;
+}
+
+.brand-wrap.brand-showroomprive {
+	margin-bottom: 7vw;
+	margin-right: 20px;
+}
+
+.brand-wrap.brand-amazon {
+	margin-top: -6vw;
+	margin-right: 20px;
+	width: 15vw;
+}
+
+.brand-wrap.brand-amazon img {
+	max-width: 100%;
+}
+
+.brand-wrap.brand-HM img {
+	max-width: 90%;
+}
+
+.brand-row.brand-row01 {
+	width: 85%;
+}
+
+.brand-row.brand-row02 {
+	width: 65%;
+	margin-left: auto;
+}
+
+.brand-row.brand-row03 {
+	width: 85%;
+	margin-left: auto;
+}
+
+.arrow-icon img {
+	margin-bottom: 5px;
+}
+
+.brand-wrap {
+    width: 12vw;
+}
+
+.brand-wrap.brand-veepee {
+	width: 17vw;
+}
+
+.brand-wrap.brand-veepee img {
+	max-width: 100%;
+}
+
+.banner-europe-right .brand-zara img {
+	margin-left: auto;
+}
+
+.brand-wrap.brand-showroomprive img {
+	margin-left: auto;
+    max-width: 60%;
+}
+
+/*USA*/
+
+.brand-row.brand-row01.banner-row-usa,
+.brand-row.brand-row01.banner-row-china {
+	width: 65%;
+}
+
+.banner-row-usa .brand,
+.banner-row-china .brand {
+	margin-left: -40px;
+}
+
+.brand-americaneagle {
+	margin-top: -75px;
+}
+
+.brand-row.brand-row03.banner-row-usa {
+	width: 90%;
+    margin: auto;	
+}
+
+/*China*/
+.brand-wrap.logo-aliexpress img {
+	padding-top: 20px;
+	margin-left: auto;
+}
+
+.brand-row.brand-row02.banner-row-china {
+	width: 50%;
+}
+
+.brand-wrap.brand.desktop-logo {
+	width: 5vw;
+	height: 5vw;
+}
+
+
+.brand-wrap.brand.desktop-logo img {
+	max-width: 100%;
+}
+
+
+@media (max-width: 698px) {
+	.banner-slider .item {
+		height: 40vw;
+	}
+}
+
+@media (max-width: 425px) {
+	.banner-slider .item {
+		height: 45vw;
+	}
+
+	.order-btn-link {
+	    font-size: 1em;
+	    padding: 10px;
+	}
+
+	.header-slider .owl-dots {
+	    bottom: 3px;
+	}
+}

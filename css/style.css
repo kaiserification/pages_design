@@ -2217,7 +2217,7 @@ input#amount {
     position: absolute !important;
     top: 50%;
 }
-
+/*
 .owl-nav .owl-prev {
     left: 0px;
 }
@@ -2225,7 +2225,7 @@ input#amount {
 #product-tab .owl-nav,
 .blog .owl-nav {
     right: 10px;
-}
+}*/
 
 
 /*#product-thumbnail .owl-nav .owl-prev {

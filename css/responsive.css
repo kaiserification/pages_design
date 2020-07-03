@@ -36,6 +36,14 @@
     position: relative;
 }
 
+.div#options {
+    width: 100%;
+}
+
+.mobile-logo {
+    display: none;
+}
+
 @media (min-width: 1920px) and (max-width: 2560px) {
     .team-grids {
         display: grid;
@@ -90,28 +98,17 @@
     .navbar .nav-orders-link {
         margin-left: 90px;
     }
-
-    .navbar-row form#nav-search {
-        margin-left: 25px !important;
-    }
-
-    .owl-carousel .item img {
-        width: 100%;
-        height: 400px;
-        user-select: none;
-        object-position: center;
-    }
 }
 
 
 /* LG Device :992px. */
-@media (min-width: 992px) and (max-width: 1024px) {
+@media (min-width: 993px) and (max-width: 1024px) {
 
 }
 
 
 /* Extra small Device. */
-@media (max-width: 991px) {
+@media (max-width: 992px) {
     .d-mobile {
         display: block !important;
     }
@@ -122,11 +119,6 @@
 
     .navbar .navbar-row {
         display: block;
-    }
-
-    .form-wrap.d-flex.justify-content-between {
-        width: auto;
-        margin-left: 65px;
     }
 
     .navbar-row .logo-link {
@@ -141,13 +133,6 @@
         padding-top: 20px;
     }
 
-    .form-wrap {
-        width: auto;
-        margin-left: 65px;
-        margin-top: 10px;
-        padding-bottom: 10px;
-    }
-
     .categories-menu {
         min-height: auto;
     }
@@ -155,19 +140,57 @@
     .focused-shadow {
         top: 103px;
     }
-}
 
+    .categories-menu > li {
+        line-height: 40px;
+        min-height: 40px;
+    }
 
-/* MD Device */
-@media (min-width: 768px) and (max-width: 991px) {
-    .section .section-content .section-card {
-        width: 100%;
-        margin-bottom: 15px;
+    .navbar-row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .add-cart {
+        color: #2f064d;
+    }
+
+    .add-cart.d-mobile .fa-md {
+        font-size: 2em !important;
+    }
+
+    .logo-euro {
+        color: #2f064d;
+        display: flex !important;
+    }
+
+    .navbar .navbar-row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    span.icon.ti-angle-down {
+        font-size: 0.8em;
+        margin-top: -3px;
     }
 }
 
 
-@media screen and (max-width: 768px) {
+/* MD Device */
+@media (min-width: 768px) and (max-width: 992px) {
+    .section .section-content .section-card {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .order-btn-link {
+        font-size: 1em;
+        padding: 14px;
+    }
+}
+
+
+@media (max-width: 767px) {
     .section .section-content .section-card {
         width: 100%;
     }
@@ -176,13 +199,16 @@
         grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
     }
 
-    .categories-menu > li {
-        line-height: 40px;
-        min-height: 40px;
-    }
-
     .newsletter {
         margin-bottom: 15px;
+    }
+
+    .mobile-logo {
+        display: block;
+    }
+
+    .desktop-logo {
+        display: none;
     }
 }
 
@@ -243,10 +269,6 @@
         padding: 0 10px;
     }
 
-    .form-wrap.d-flex.justify-content-between {
-        margin-left: 55px;
-    }
-
     .navbar .navbar-row .nav-auth a {
         font-size: 9px;
     }
@@ -279,6 +301,10 @@
     .transporteur-de-produits-extraordinaires img {
         height: 180px;
     }
+
+    span.icon.ti-angle-down {
+        font-size: 0.7em;
+    }
 }
 
 
@@ -297,7 +323,7 @@
     }
 
     .navbar-menu .navbar-menu-item {
-        margin: 0px 0 0 8px!important;
+        margin: 0 !important;
     }
 }
 
@@ -305,14 +331,6 @@
     .categories-menu > li {
         line-height: 40px;
         min-height: 40px;
-    }
-
-    .owl-carousel .item img {
-        width: auto;
-        height: 500px;
-        user-select: none;
-        object-position: center;
-        object-fit: cover;
     }
 
     .footer .footer-sections {
@@ -349,9 +367,6 @@
 }
 
 @media (max-width: 425px) {
-    .nav-wrap.d-flex.justify-content-between.align-items-center {
-        display: block !important;
-    }
 
     .navbar .nav-orders-link {
         margin-right: 0;
@@ -598,6 +613,10 @@
         border-radius: 8px;
         font-size: 6px;
         left: 9px;
+    }
+
+    .main {
+        padding: 10px;
     }
 
 }

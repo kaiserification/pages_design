@@ -151,7 +151,7 @@ $(function() {
 
         owl.owlCarousel({
             loop: true,
-            autoplay: true,
+            autoplay: false,
             autoplayTimeout: 3000,
             autoplayHoverPause: false,
             responsiveClass: true,
@@ -277,7 +277,7 @@ $(function() {
         /* ===== Offers carousel =====   */
         $('.offers').owlCarousel({
             loop: true,
-            autoplay: true,
+            autoplay: false,
             responsiveClass: true,
             items: 3, //10 items above 1000px browser width
             responsive: {
@@ -335,7 +335,7 @@ $(function() {
         /* ===== Brand carousel =====   */
         $('.brand').owlCarousel({
                 loop: true,
-                autoplay: true,
+                autoplay: false,
                 responsiveClass: true,
                 items: 6, //10 items above 1000px browser width
                 responsive: {

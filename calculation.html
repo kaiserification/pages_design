@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <!-- =====  MOBILE SPECIFICATION  ===== -->
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="csrf-param" content="authenticity_token" />
+<meta name="csrf-token" content="ghf1jRLod34AtVvDdt27a5sDvxRubty1JCyS/suu95lzQusLtHFWk56LalQ21EJzAAamIdBvMRDdPrQjK3wvAQ==" />
+    
+    <!-- SEO META TAGS -->
+    <meta name="keywords" content="Amazon, amazon.fr, HM, hm.fr, livres, achats en ligne, librairie, magazine, abonnement, musique, Cds, DVD, Vidéo, Electronique, Jeux vidéos, ordinateurs, téléphones portables, jouets, jeux, vêtements, accessoires, chaussures, bijoux, montres, produits de bureau, sports en plein air, articles de sport, produits pour bébés, santé, soins personnels, maison, jardin, lit et de bain, meubles, outils, matériel, aspirateurs, vie en plein air, pièce pour véhicules automobiles, fournitures pour animaux de compagnie, à large bande, dsl...">
+    <meta name="description" content="ShopMeAway est un site  d&#39;achat en ligne parmi des millions de produits en stock. Livraison gratuite à partir de 25€. Vos articles à petits prix : culture, high-tech, mode, jouets, sport,accessoires auto, ordinateurs, électronique, mode &amp; beauté, santé, jardin, jouets &amp; article de sport, et articles de mariages...">
+    <meta name="distribution" content="global">
+    <meta name="title" content="ShopMeAway | Estimez vos achats">
+    <meta name="revisit-after" content="2 Days">
+    <meta name=”robots” content="index, follow">
+
+    <meta name="copyright" content="ShopMeAway">
+    <meta name="rating" content="8 YEARS">
+    <meta name="Language" content="fr_sn">
+    <meta name="GOOGLEBOT" content="NOARCHIVE">
+    <meta name="google-site-verification" content="o0knSEfUeYVo_sXC-UqeancAtM4-qLYN9CONZZSMuBA" />
+    <meta name="msvalidate.01" content="50AB045CA98AFDD85F5BD382C2E0DAB6" />
+
+
+    <title>Estimez vos achats | ShopMeAway</title>
+    <link rel="stylesheet" href="css/calculation.css">
+    <link rel="stylesheet" href="css/utils.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="/js/network_verification.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144273908-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'UA-144273908-1');
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Ads: 973501314 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-973501314"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+        gtag('config', 'AW-973501314');
+    </script>
+</head>
+
+<body>
+
+    <div id="app">
+        
+        <header class="screen">
+            <a href="/"><i class="fa fa-long-arrow-left"></i> accueil</a>
+            <span>{{ result }}</span>
+        </header>
+
+        <section class="mode-of-transport">
+            <button class="button-plane" @click.prevent="onSelectPlane()" :class="{selected: is_plane == true}">Avion</button>
+            <span style="font-size: 1.6em;color: #fff;">{{ selected_currency }}</span> 
+            <button class="button-boat" @click.prevent="onSelectBoat()" :class="{selected: is_boat == true}">Bateau</button>
+        </section>
+
+        <section class="countries">
+            <img title="FRANCE" src="images/flags/france.png" @click.prevent="onSelectFrance()" :class="{selected: is_france}">
+            <img title="USA" src="images/flags/usa.png" @click.prevent="onSelectUsa()" :class="{selected: is_usa}">
+            <img title="CHINE" src="images/flags/china.png" @click.prevent="onSelectChina()" :class="{selected: is_china}" v-if="(is_plane == false && is_boat == false) || (is_plane == true)">
+        </section>
+
+        <form class="form boat" key="form_boat_key" v-if="is_boat && is_valid">
+            <div class="field">
+                <label>Montant</label>
+                <input type="number" v-model="amount">
+            </div>
+
+            <div class="field">
+                <label for="">Poids</label>
+                <input type="number" v-model="weight">
+            </div>
+            <div class="field">
+                <label for="">Longueur (m)</label>
+                <input type="number" v-model="length">
+            </div>
+            <div class="field">
+                <label for="">Largeur (m)</label>
+                <input type="number" v-model="width">
+            </div>
+            <div class="field" style="grid-column:span 2;">
+                <label for="">Hauteur (m)</label>
+                <input type="number" v-model="height">
+            </div>
+        </form>
+
+        <form class="form plane" key="form_plane_key" v-if="is_plane && is_valid">
+            <div class="field">
+                <label for="">Valeur (article)</label>
+                <input type="number" v-model="amount">
+            </div>
+
+            <div class="field">
+                <label for="">Poids (articles)</label>
+                <input type="number" v-model="weight">
+            </div>
+
+            <div class="field">
+                <label for="">Longueur (cm)</label>
+                <input type="number" v-model="length">
+            </div> 
+            <div class="field">
+                <label for="">Largeur (cm)</label>
+                <input type="number" v-model="width">
+            </div>
+            <div class="field" style="grid-column:span 2;">
+                <label for="">Hauteur (cm)</label>
+                <input type="number" v-model="height">
+            </div>
+        </form>
+
+        <section class="submission" v-if="is_valid">
+            <button :disabled="!is_form_for_plane_valid" type="submit" @click.prevent="onSubmitPlane()" v-if="is_plane">
+                <i class="fa fa-calculator"></i> Evaluer
+            </button>
+            <button :disabled="!is_form_for_boat_valid" type="submit" @click.prevent="onSubmitBoat()" v-if="is_boat">
+                <i class="fa fa-calculator"></i> Evaluer
+            </button>
+            <button type="submit" @click.prevent="eraseCalculation()">
+                <i class="fa fa-ban"></i> effacer
+            </button>
+        </section>
+    </div>
+
+    <div id="left-side" class="left-side">
+        <nav class="calculation-nav">
+            <a href="/" class="logo"><img src="./images/logo_sma.png" alt=""></a>
+            <a href="/catalogue-de-produits"><i class="fa fa-home"></i> Catalogue</a>
+            <a href="/forum-aux-questions"><i class="fa fa-question"></i> Forum aux questions</a>
+        </nav>
+
+        <div class="mt-100 ml-10 text-white text-center full-width" style="position:absolute;z-index: 1000">
+            <h2>Faîtes une estimation de vos achats</h2>
+            <p>Cette estimation n'a pas de valeur contractuelle !</p>
+        </div>
+
+        <div class="order-links">
+            <a href="/passer-une-commande-perso">
+                <span>Passer une commande PERSO</span> <span class="fa fa-angle-right"></span>
+            </a>
+            <a href="/passer-une-commande-comptoir-du-monde">
+                <span>Passer une commande CDM</span> <span class="fa fa-angle-right"></span>
+            </a>
+            <a href="/catalogue-de-produits">
+                <span>Passer une commande catalogue</span> <span class="fa fa-angle-right"></span>
+            </a>
+        </div>
+
+        <div class="text-info">
+            <div class="d-flex justify-content-between" style="flex-direction: column">
+                <div class="text-bold text-uppercase mr-10 text-underline">Attention</div>
+                <div>
+                    <ul style="list-style-type: none;">
+                        <li class="text-bold">La Facturation en groupage
+                            est faite sur le maximum entre 14EUR du Kg ou 20% de la valeur pour la France (
+                            respectivement 23$ du Kg ou 25% de la valeur pour les USA).
+                            Cette facturation tient compte des
+                            droits et taxes et vous n'avez en conséquence pas de supplement qui vous est
+                            demande à l'arrivée au Sénégal.
+
+                            Le poids fait référence au maximum
+                            entre le poids brut et le poids volume. Le poids volume est la longueur *
+                            largeur * hauteur(cm)/5000.
+
+                            Toute cotation préalable a l'arrivée
+                            de vos produits au Sénégal est basée sur des poids et dimensions estimatifs. Il
+                            est de votre responsabilité de vous assurer de leur exactitude car la facture
+                            finale tiendra compte des poids et dimensions réellement constates du colis (
+                            emballage inclus)
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
+    <script src="js/calculations.js"></script>
+</body>
+</html>
