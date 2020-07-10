@@ -19,16 +19,14 @@ body {
     font-family: var(--font-family);
 }
 
-.calculator-container {
-    width: 50%;
-    margin: 0 auto;
-}
-.calculator-container.with-text .title {
+.with-text .title {
     text-align: center;
     text-transform: uppercase;
-    padding: 15px 0;
+    padding: 20px 0;
+    text-decoration: underline;
 }
-.calculator-container.with-text p {
+
+.with-text p {
     text-align: justify;
     line-height: 1.8;
     font-size: 1.1em;
@@ -44,15 +42,9 @@ body {
 }
 
 
-/*#app {
-    padding: 10px;
-    width: 40%;
-    margin-left: auto;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    border-right: 2px solid #000;
-}*/
+.calculation-2 main {
+    padding: 0;
+}
 
 #left-side {
     flex: 1;
