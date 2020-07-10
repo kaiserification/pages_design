@@ -1,4 +1,10 @@
 const product_catalogue_path = document.querySelector('meta[name="catalogue_path"]').getAttribute('content');
+const headers = {'X-CSRF-TOKEN': document.querySelector('meta[name="csrf-token"]').getAttribute('content')};
+
+function validateEmail(email) {
+    const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(String(email).toLowerCase());
+}
 
 Vue.component('categories-dropdown', {
 	props: {
@@ -269,6 +275,326 @@ Vue.component('world-counter-order-form', {
 		console.log(this.parent_categories)
 	}
 });
+
+
+Vue.component('calculator', {
+	data () {
+		return {
+			amount: '',
+			length: '',
+			height: '',
+			width: '',
+			weight: '',
+			result: 0,
+			email: '',
+
+			is_boat: false,
+			is_plane: false,
+
+			is_france: false,
+			is_usa: false,
+			is_china: false,
+			threshold_volume: 0.1
+		}
+	},
+	methods: {
+		onSelectPlane () {
+			// this.eraseCalculation()
+			this.is_plane = true
+			this.is_boat  = false
+		},
+
+		onSelectBoat () {
+			// this.eraseCalculation()
+			this.is_plane = false
+			this.is_boat  = true
+		},
+
+		onSelectFrance () {
+			this.is_france = true
+			this.is_usa    = false
+			this.is_china  = false
+		},
+		onSelectUsa () {
+			this.is_france = false
+			this.is_usa    = true
+			this.is_china  = false
+		},
+
+		onSelectChina () {
+			this.is_france = false
+			this.is_usa    = false
+			this.is_china  = true
+		},
+
+		
+
+		maxPriceForFrance () {
+			let price1 = 0
+			let price2 = 0
+
+			if (this.volume > this.threshold_volume) {
+				price1 = this.volume * 350
+    			price2 = this.amount * 0.1
+			} else if (this.volume < this.threshold_volume) {
+				price1 = this.weight * 3.4
+   				price2 = this.amount * 0.1
+			}
+
+			return Math.max(price1, price2).toFixed(2)
+		},
+
+		maxPriceForUsa () {
+			let price1 = 0
+			let price2 = 0
+
+			if (this.volume > this.threshold_volume) {
+				price1 = this.volume * 500
+				price2 = this.amount * 0.2
+			} else if (this.volume < this.threshold_volume) {
+				price1 = this.weight * 4.5
+   				price2 = this.amount * 0.2
+			}
+
+			return Math.max(price1, price2).toFixed(2)
+		},
+		maxPriceForChina () {
+			let price1 = 0
+			let price2 = 0
+
+			if (this.volume > this.threshold_volume) {
+				price1 = this.volume * 232500
+    			price2 = this.amount * 0.1
+			} else if (this.volume < this.threshold_volume) {
+				price1 = this.weight * 2300
+   				price2 = this.amount * 0.1
+			}
+
+			return Math.max(price1, price2).toFixed(2)
+		},
+		scrollTop() {
+			if (document.body.scrollTop)
+				document.body.scrollTop = 0; // For Safari
+			
+			if (document.documentElement.scrollTop) 
+  				document.documentElement.scrollTop = 0
+		},
+		onSubmitBoat () {
+			this.scrollTop()
+			let devise = null
+			let result = null
+
+			if (this.is_usa) {
+				result = this.maxPriceForUsa()
+				devise = '$'
+			} else if (this.is_france) {
+				result = this.maxPriceForFrance()
+				devise = '€'
+			} else if (this.is_china) {
+				result = this.maxPriceForChina()
+				devise = 'FCFA'
+			}
+
+			this.result = `${result} ${devise}`
+		},
+
+		onSubmitPlane () {
+			this.scrollTop()
+			let computed_amount = 0
+			let computed_weight = 0
+			let result          = 0
+			let devise          = null
+
+			if (this.is_usa) {
+				computed_amount = parseFloat(this.amount) * 0.25
+				computed_weight = parseFloat(this.weight) * 23
+				devise          = '$' 
+			} else if (this.is_france) {
+				computed_amount = parseFloat(this.amount) * 0.2
+				computed_weight = parseFloat(this.weight) * 14
+				devise          = '€' 
+			}
+
+			if (this.is_china) {
+				toastr.options = { "positionClass": "toast-bottom-full-width" };
+				// computed_amount = parseFloat(this.amount) * 0.15
+				// computed_weight = parseFloat(this.weight) * 7000 //13
+				// devise          = 'FCFA' 
+
+				if (this.email != '' && validateEmail(this.email)) {
+					this.sendEmailTo({
+						email: this.email,
+						amount: this.amount,
+						weight: this.weight,
+						width: this.width,
+						height: this.height,
+						length: this.length,
+					});
+				} else {
+					toastr.error('Vous devez une adresse email valide.');
+				}
+				return;
+			}
+			result = Math.max(computed_amount, computed_weight).toFixed(2)
+			this.result = `${result} ${devise}`
+		},
+
+		sendEmailTo(data) {
+			showLoader();
+			axios({
+	    		method: 'POST',
+	    		url: 'send-email-for-china-calculation',
+	    		data: { data },
+	    		headers: headers
+	    	}).then(({data}) => {
+	    		if (data.sent) {
+	    			toastr.success('Nous vous contacterons dans les plus brefs délais.');		
+	    			this.eraseCalculation();
+	    		}
+	    	}).catch(({message}) => {
+	    		toastr.error(message)
+	    	}).finally(() => {
+	    		hideLoader();
+	    	});
+		},
+
+		eraseCalculation () {
+			this.amount    = ''
+			this.length    = ''
+			this.height    = ''
+			this.width     = ''
+			this.weight    = ''
+			this.result    = 0
+			this.is_boat   = false
+			this.is_plane  = false
+			this.is_france = false
+			this.is_usa    = false
+			this.is_china  = false
+		}
+	},
+
+	computed: {
+		selected_currency() {
+			if (this.is_usa) {
+				return '$'
+			} else if (this.is_france) {
+				return '€'
+			} else if (this.is_china) {
+				return 'FCFA'
+			}
+			return ''
+		},
+		is_valid () {
+			return this.is_valid_plane || this.is_valid_boat
+		},
+		is_valid_plane () {
+			return (this.is_plane && this.is_france) ||
+				(this.is_plane && this.is_usa) || 
+				(this.is_plane && this.is_china) 
+		},
+		is_valid_boat () {
+			return (this.is_boat && this.is_france) ||
+				(this.is_boat && this.is_usa) || 
+				(this.is_boat && this.is_china) 
+		},
+		volume () {
+			return this.length * this.width * this.height
+		},
+		is_form_for_plane_valid () {
+			return this.amount > 0 && this.weight > 0 
+		},
+		is_form_for_boat_valid () {
+			return this.amount > 0 && this.weight > 0 && this.length > 0 && this.width > 0 && this.height > 0
+		}
+	},
+	template: `
+		<div class="calculation__wrapper" id="calculation__wrapper">
+			<header class="screen">
+				<span></span>
+			    <span>{{ result }}</span>
+			</header>
+
+			<section class="mode-of-transport">
+			    <button class="button-plane" @click.prevent="onSelectPlane()" :class="{selected: is_plane == true}">Avion</button>
+			    <span style="font-size: 1.6em;color: #000;">{{ selected_currency }}</span> 
+			    <button class="button-boat" @click.prevent="onSelectBoat()" :class="{selected: is_boat == true}">Bateau</button>
+			</section>
+
+			<section class="countries">
+			    <img title="FRANCE" src="images/flags/france.png" @click.prevent="onSelectFrance()" :class="{selected: is_france}">
+			    <img title="USA" src="images/flags/usa.png" @click.prevent="onSelectUsa()" :class="{selected: is_usa}">
+			    <img title="CHINE" src="images/flags/china.png" @click.prevent="onSelectChina()" :class="{selected: is_china}" v-if="(is_plane == false && is_boat == false) || (is_plane == true)">
+			</section>
+
+			<form class="form" key="form_boat_key" v-if="is_boat && is_valid">
+			    <div class="field">
+			        <label>Valeur (article en {{ selected_currency }})</label>
+			        <input type="number" v-model="amount">
+			    </div>
+
+			    <div class="field">
+			        <label for="">Poids (kg)</label>
+			        <input type="number" v-model="weight">
+			    </div>
+			    <div class="field">
+			        <label for="">Longueur (m)</label>
+			        <input type="number" v-model="length">
+			    </div>
+			    <div class="field">
+			        <label for="">Largeur (m)</label>
+			        <input type="number" v-model="width">
+			    </div>
+			    <div class="field" style="grid-column:span 2;">
+			        <label for="">Hauteur (m)</label>
+			        <input type="number" v-model="height">
+			    </div>
+			</form>
+
+			<form class="form plane" key="form_plane_key" v-if="is_plane && is_valid">
+				
+			    <div class="field">
+			        <label for="">Valeur (articles en {{ selected_currency }})</label>
+			        <input type="number" v-model="amount">
+			    </div>
+
+			    <div class="field">
+			        <label for="">Poids (kg)</label>
+			        <input type="number" v-model="weight">
+			    </div>
+
+			    <div class="field">
+			        <label for="">Longueur (cm)</label>
+			        <input type="number" v-model="length">
+			    </div> 
+			    <div class="field">
+			        <label for="">Largeur (cm)</label>
+			        <input type="number" v-model="width">
+			    </div>
+			    <div class="field" style="grid-column:span 2;">
+			        <label for="">Hauteur (cm)</label>
+			        <input type="number" v-model="height">
+			    </div>
+
+			    <div v-if="is_china" class="field" style="grid-column:span 2;">
+			        <label for="">Votre adresse email</label>
+			        <input type="email" v-model="email">
+			    </div>
+			</form>
+
+			<section class="submission" v-if="is_valid">
+			    <button :disabled="!is_form_for_plane_valid" type="submit" @click.prevent="onSubmitPlane()" v-if="is_plane">
+			        <i class="fa fa-calculator"></i> Evaluer
+			    </button>
+			    <button :disabled="!is_form_for_boat_valid" type="submit" @click.prevent="onSubmitBoat()" v-if="is_boat">
+			        <i class="fa fa-calculator"></i> Evaluer
+			    </button>
+			    <button type="submit" @click.prevent="eraseCalculation()">
+			        <i class="fa fa-ban"></i> effacer
+			    </button>
+			</section>
+		</div>
+	`
+})
 
 
 new Vue({
