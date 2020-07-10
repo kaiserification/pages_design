@@ -19,19 +19,32 @@ body {
     font-family: var(--font-family);
 }
 
-.calculator-container {
-    width: 60%;
+main.calculation-2 {
+    padding: 30px 0;
+}
+
+.calculator-element {
     margin: 0 auto;
     background-color: #fff;
     border:1px solid #ccc;
-    margin-bottom: 10px;
 }
-.calculator-container.with-text .title {
+
+.with-text {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    background: white;
+    padding: 10px;
+    padding-bottom: 15px;
+}
+
+.with-text .title {
     text-align: center;
     text-transform: uppercase;
     padding: 15px 0;
+    text-decoration: underline;
 }
-.calculator-container.with-text p {
+
+.with-text p {
     line-height: 1.8;
     font-size: 1.02em;
     padding: 0 5px;
@@ -45,17 +58,6 @@ body {
     color: #000;
 
 }
-
-
-/*#app {
-    padding: 10px;
-    width: 40%;
-    margin-left: auto;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    border-right: 2px solid #000;
-}*/
 
 #left-side {
     flex: 1;
