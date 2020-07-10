@@ -180,8 +180,8 @@ let app = new Vue({
 		},
 		is_valid_boat () {
 			return (this.is_boat && this.is_france) ||
-				(this.is_boat && this.is_usa) || 
-				(this.is_boat && this.is_china) 
+				(this.is_boat && this.is_usa) ||
+				(this.is_boat && this.is_china)
 		},
 		volume () {
 			return this.length * this.width * this.height
@@ -205,4 +205,3 @@ document.addEventListener('keydown', (event) => {
 		app.eraseCalculation()
 	}
 });
-

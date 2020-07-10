@@ -26,12 +26,21 @@
 
     <title>Estimez vos achats | ShopMeAway</title>
     <link rel="stylesheet" href="css/calculation.css">
+    <!-- <link rel="stylesheet" href="css/calculation_responsive.css"> -->
     <link rel="stylesheet" href="css/utils.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-    
-    <script src="/js/network_verification.js"></script>
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="https://cdn.materialdesignicons.com/1.1.34/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/home-page.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+
+
+    <!-- <script src="/js/network_verification.js"></script> -->
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-144273908-1"></script>
     <script>
@@ -58,6 +67,246 @@
 </head>
 
 <body>
+    <main class="main">
+        <!--START CONTACT SIDENAV -->
+        <div class="slider-contact calculation_only" id="slider-contact">
+            <div class="slider-label"></div>
+            <button id="slider-toggler" class="slider-toggler">
+                <span class="h"></span><span class="v"></span>
+            </button>
+            <div class="slider__contact--content">
+                <nav class="SidebarMenu__Nav SidebarMenu__Nav--primary" aria-label="Navigation latérale">
+                    <div class="Collapsible">
+                        <button class="Collapsible__Button Heading" data-action="toggle-collapsible"
+                            aria-expanded="false">Commande<span class="Collapsible__Plus"></span>
+                        </button>
+                        <div class="Collapsible__Inner">
+                            <div class="Collapsible__Content">
+                                <div class="Collapsible">
+                                    <a href="/" class="Collapsible__Button sub_home Heading Text--subdued Link Link--primary">Commande PERSO</a>
+                                </div>
+                                <div class="Collapsible">
+                                    <a href="/" class="Collapsible__Button sub_home Heading Text--subdued Link Link--primary">Commande CDM</a>
+                                </div>
+                                <div class="Collapsible">
+                                    <a href="/" class="Collapsible__Button sub_home Heading Text--subdued Link Link--primary">Connexion</a>
+                                </div>
+                                <div class="Collapsible side_nav_mobile">
+                                    <nav class="nav-auth">
+                                        <ul class="navbar-menu d-flex justify-content-between align-items-center flex-wrap">
+                                            <li class="navbar-menu-item sidebar_only">
+                                                <!-- <a href="/se-connecter" class="navbar-menu-link sub_nav">Connexion</a> -->
+                                            </li>
+                                            <li class="navbar-menu-item with-dropdown sidebar_only">
+                                                <a href="#" data-toggle="dropdown" data-target="#devise-dropdown1"
+                                                    class="navbar-menu-link sub_nav d-flex justify-content-end align-items-center">
+                                                    devise <i class="fa fa-angle-down ml-2"></i>
+                                                </a>
+                                            </li>
+                                            <div class="navbar-menu-dropdown-box mobile_only" id="devise-dropdown1">
+                                                <a class="active prevent-click" href="/default-currency">Devise par défaut</a>
+                                                <a class="mb-10" href="/fcfa-currency">convertir en Francs FCFA</a>
+                                            </div>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Collapsible">
+                        <button class="Collapsible__Button Heading" data-action="toggle-collapsible"
+                        aria-expanded="false">menu<span class="Collapsible__Plus"></span>
+                        </button>
+
+                        <div class="Collapsible__Inner">
+                            <div class="Collapsible__Content">
+                                <div class="Collapsible"><a href=""
+                                    class="Collapsible__Button Heading Text--subdued Link Link--primary">Nos adresses</a>
+                                </div>
+                                <div class="Collapsible"><a href=""
+                                    class="Collapsible__Button Heading Text--subdued Link Link--primary">Combien ça côute ?</a>
+                                </div>
+                                <div class="Collapsible"><a href=""
+                                        class="Collapsible__Button Heading Text--subdued Link Link--primary">Fonctionnement</a>
+                                </div>
+                                <div class="Collapsible"><a href=""
+                                        class="Collapsible__Button Heading Text--subdued Link Link--primary">Sites webs</a>
+                                </div>
+                                <div class="Collapsible"><a href=""
+                                    class="Collapsible__Button Heading Text--subdued Link Link--primary">Codes promos</a>
+                                </div>
+                                <div class="Collapsible"><a href=""
+                                        class="Collapsible__Button Heading Text--subdued Link Link--primary">Forum aux questions</a>
+                                </div>
+                                <div class="Collapsible"><a href=""
+                                    class="Collapsible__Button Heading Text--subdued Link Link--primary">Utiliser nos services</a>
+                                </div>
+                                <div class="Collapsible"><a href=""
+                                        class="Collapsible__Button Heading Text--subdued Link Link--primary">Délais de livraison</a>
+                                </div>
+                                <div class="Collapsible"><a href=""
+                                        class="Collapsible__Button Heading Text--subdued Link Link--primary">Accueil</a>
+                                </div>
+                                <!-- <div class="Collapsible"><a href=""
+                                        class="Collapsible__Button Heading Text--subdued Link Link--primary">Catalogue de produits</a>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="Collapsible">
+                        <button class="Collapsible__Button Heading" data-action="toggle-collapsible"
+                        aria-expanded="false">catalogue<span class="Collapsible__Plus"></span>
+                        </button>
+
+                        <div class="Collapsible__Inner">
+                            <div class="Collapsible__Content">
+                                <div class="Collapsible">
+                                    <button class="Collapsible__Button_sub_Inner Heading sub_menu_btn" data-action="toggle-collapsible"
+                                    aria-expanded="false">Bricolages<span class="Collapsible__Plus"></span>
+                                    </button>
+                                    <div class="Collapsible__Inner_sub_Inner sub_menu">
+                                        <div class="Collapsible__Content">
+                                            <div class="Collapsible">
+                                                <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">CHAISES HAUTE_1</a>
+                                                <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">CHAISES HAUTE_2</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="Collapsible">
+                                    <button class="Collapsible__Button_sub_Inner Heading sub_menu_btn" data-action="toggle-collapsible"
+                                    aria-expanded="false">Décorations<span class="Collapsible__Plus"></span>
+                                    </button>
+                                    <div class="Collapsible__Inner_sub_Inner sub_menu">
+                                        <div class="Collapsible__Content">
+                                            <div class="Collapsible">
+                                                <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">Sub_Décorations_1</a>
+                                                <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">Sub_Décorations_2</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="Collapsible">
+                                    <button class="Collapsible__Button_sub_Inner Heading sub_menu_btn" data-action="toggle-collapsible"
+                                    aria-expanded="false">Electronique<span class="Collapsible__Plus"></span>
+                                    </button>
+                                    <div class="Collapsible__Inner_sub_Inner sub_menu">
+                                        <div class="Collapsible__Content">
+                                            <div class="Collapsible">
+                                                <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">Sub_Electronique_1</a>
+                                                <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">Sub_Electronique_2</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="Collapsible">
+                                    <button class="Collapsible__Button_sub_Inner Heading sub_menu_btn" data-action="toggle-collapsible"
+                                    aria-expanded="false">Informatiques<span class="Collapsible__Plus"></span>
+                                    </button>
+                                    <div class="Collapsible__Inner_sub_Inner sub_menu">
+                                        <div class="Collapsible__Content">
+                                            <div class="Collapsible">
+                                                <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">Sub_Informatiques</a>
+                                                <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">Sub_Informatiques</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="Collapsible">
+                                    <button class="Collapsible__Button_sub_Inner Heading sub_menu_btn" data-action="toggle-collapsible"
+                                    aria-expanded="false">Loisirs et Jouets<span class="Collapsible__Plus"></span>
+                                    </button>
+                                    <div class="Collapsible__Inner_sub_Inner sub_menu">
+                                        <div class="Collapsible__Content">
+                                            <div class="Collapsible">
+                                                <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">Sub_Loisirs et Jouets_1</a>
+                                                <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">Sub_Loisirs et Jouets_2</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="Collapsible">
+                                    <button class="Collapsible__Button_sub_Inner Heading sub_menu_btn" data-action="toggle-collapsible"
+                                    aria-expanded="false">Mécaniques<span class="Collapsible__Plus"></span>
+                                    </button>
+                                    <div class="Collapsible__Inner_sub_Inner sub_menu">
+                                        <div class="Collapsible__Content">
+                                            <div class="Collapsible">
+                                                <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">Sub_Mécaniques_1</a>
+                                                <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">Sub_Mécaniques_2</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="Collapsible">
+                        <button class="Collapsible__Button Heading" data-action="toggle-collapsible"
+                        aria-expanded="false">contactez nous<span class="Collapsible__Plus"></span>
+                        </button>
+
+                        <div class="Collapsible__Inner">
+                            <div class="Collapsible__Content">
+                                <ul class="dropdwon-container contact-list">
+                                    <li><span class="contact-list__label"><i class="fa fa-map-marker"></i> Adresse</span><span
+                                            class="contact-list__value">Route de Ngor NG03, Dakar SENEGAL</span></li>
+                                    <li><span class="contact-list__label"><i class="fa fa-phone-square"></i> numéro de
+                                            telephone</span> <span class="contact-list__value">(+221) 77 828 99 39</span></li>
+                                    <li><span class="contact-list__label"><i class="fa fa-envelope"></i> adresse Email</span> <span
+                                            class="contact-list__value">contact @shopmeaway.com</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <ul class="contact-list mt-15">
+                    <li>
+                        <span class="contact-list__label main_title">Réseaux sociaux</span>
+                        <span class="contact-list__value with-social-links">
+                            <a href="https://twitter.com/shopmeaway" target="_blank" class="twitter">
+                                <i class="fa fa-twitter"></i>
+                            </a>
+
+                            <a href="https://fr-fr.facebook.com/ShopmeawaySenegal/" target="_blank"
+                                class="facebook">
+                                <i class="fa fa-facebook"></i>
+                            </a>
+
+                            <a href="https://fr.linkedin.com/company/shopmeaway" target="_blank" class="linkedin">
+                                <i class="fa fa-linkedin"></i>
+                            </a>
+
+                            <a href="https://www.instagram.com/shopmeaway/" target="_blank" class="instagram">
+                                <i class="fa fa-instagram"></i>
+                            </a>
+
+                            <a href="https://api.whatsapp.com/send?phone=221778289939&text=Hi" class="whatsapp"
+                                target="_blank">
+                                <i class="mdi mdi-whatsapp"></i>
+                            </a>
+
+                            <a href="http://m.me/ShopmeawaySenegal" target="_blank" class="facebook-messenger">
+                                <i class="mdi mdi-facebook-messenger"></i>
+                            </a>
+                        </span>
+                    </li>
+                    <!-- Social icon group End-->
+                </ul>
+                <!-- Contact Us End-->
+            </div>
+        </div>
+        <!-- END CONTACT SIDENAV -->
+    </main>
+
 
     <div id="app">
         
@@ -147,7 +396,7 @@
             <a href="/forum-aux-questions"><i class="fa fa-question"></i> Forum aux questions</a>
         </nav>
 
-        <div class="mt-100 ml-10 text-white text-center full-width" style="position:absolute;z-index: 1000">
+        <div class="text-white text-center full-width title">
             <h2>Faîtes une estimation de vos achats</h2>
             <p>Cette estimation n'a pas de valeur contractuelle !</p>
         </div>
@@ -195,5 +444,19 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js"></script>
     <script src="js/calculations.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ujs/1.2.2/rails.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/speakingurl/14.0.1/speakingurl.min.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.js"></script>
+    <!-- <script src="/js/blip.js"></script> -->
+    <!-- <script src="js/sma-components.js"></script> -->
+    <script src="js/app.js"></script>
+    <script src="js/owl-carousel-init.js"></script>
+    <script src="js/alerter.js"></script>
+    <script src="js/home-page.js"></script>
 </body>
 </html>

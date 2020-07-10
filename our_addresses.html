@@ -18,8 +18,7 @@
     <link rel="stylesheet" href="css/themify-icons.css">
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/1.1.34/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
     <link rel="stylesheet" href="css/footer.css">
@@ -36,7 +35,6 @@
 
     <!-- Add responsive & default css -->
     <link rel="stylesheet" href="css/responsive.css">
-
     <link rel="stylesheet" href="css/banner_slider.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/our_addresses.css">
@@ -243,186 +241,425 @@
       
 
         <main class="main">
-            <div class="card__flip__container mt-20">
-                <h1 class="card__main__title">Avion</h1>
-
-                <div class="card__row mb-10">
-                    <div class="card__flip">
-                        <div class="card__side card__side--back france">
-                            <button class="share-whatsapp" data-target="#address_for_france"><i class="mdi mdi-whatsapp"></i></button>
-                            <ul class="card__list__group" id="address_for_france">
-                                <li class="card__list__group__item">
-                                    <span>Prénom - nom</span>
-                                    <span>AFRETAIR SHOPMEAWAY</span>
-                                </li>
-                                <li class="card__list__group__item">
-                                    <span>Adresse</span>
-                                    <span id="france-address">186 ALLEE DES ERABLES ZI PARIS NORD II VILLEPINTE</span>
-                                </li>
-                                <li class="card__list__group__item">
-                                    <span>Code postal</span>
-                                    <span id="france-postal_code">95941</span>
-                                </li>
-                                <li class="card__list__group__item">
-                                    <span>Ville</span>
-                                    <span id="france-city">Roissy Charles De Gaule</span>
-                                </li>
-                                <li class="card__list__group__item">
-                                    <span>Pays</span>
-                                    <span id="france-country">FRANCE</span>
-                                </li>
-                                <li class="card__list__group__item">
-                                    <span>Numéro de téléphone</span>
-                                    <span id="france-phone">01-48-63-12-11</span>
-                                </li>
-                            </ul>
+            <!--START CONTACT SIDENAV -->
+            <div class="slider-contact" id="slider-contact">
+                <div class="slider-label"></div>
+                <button id="slider-toggler" class="slider-toggler">
+                    <span class="h"></span><span class="v"></span>
+                </button>
+                <div class="slider__contact--content">
+                    <nav class="SidebarMenu__Nav SidebarMenu__Nav--primary" aria-label="Navigation latérale">
+                        <div class="Collapsible">
+                            <button class="Collapsible__Button Heading" data-action="toggle-collapsible"
+                                aria-expanded="false">Commande<span class="Collapsible__Plus"></span>
+                            </button>
+                            <div class="Collapsible__Inner">
+                                <div class="Collapsible__Content">
+                                    <div class="Collapsible">
+                                        <a href="/" class="Collapsible__Button sub_home Heading Text--subdued Link Link--primary">Commande PERSO</a>
+                                    </div>
+                                    <div class="Collapsible">
+                                        <a href="/" class="Collapsible__Button sub_home Heading Text--subdued Link Link--primary">Commande CDM</a>
+                                    </div>
+                                    <div class="Collapsible">
+                                        <a href="/" class="Collapsible__Button sub_home Heading Text--subdued Link Link--primary">Connexion</a>
+                                    </div>
+                                    <div class="Collapsible side_nav_mobile">
+                                        <nav class="nav-auth">
+                                            <ul class="navbar-menu d-flex justify-content-between align-items-center flex-wrap">
+                                                <li class="navbar-menu-item sidebar_only">
+                                                    <!-- <a href="/se-connecter" class="navbar-menu-link sub_nav">Connexion</a> -->
+                                                </li>
+                                                <li class="navbar-menu-item with-dropdown sidebar_only">
+                                                    <a href="#" data-toggle="dropdown" data-target="#devise-dropdown1"
+                                                        class="navbar-menu-link sub_nav d-flex justify-content-end align-items-center">
+                                                        devise <i class="fa fa-angle-down ml-2"></i>
+                                                    </a>
+                                                </li>
+                                                <div class="navbar-menu-dropdown-box mobile_only" id="devise-dropdown1">
+                                                    <a class="active prevent-click" href="/default-currency">Devise par défaut</a>
+                                                    <a class="mb-10" href="/fcfa-currency">convertir en Francs FCFA</a>
+                                                </div>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card__side card__side--front france">
-                            <h5>
-                                <span class="fa fa-plane fa-2x"></span>
-                                <span>FRANCE</span>
-                            </h5>
+
+                        <div class="Collapsible">
+                            <button class="Collapsible__Button Heading" data-action="toggle-collapsible"
+                            aria-expanded="false">menu<span class="Collapsible__Plus"></span>
+                            </button>
+
+                            <div class="Collapsible__Inner">
+                                <div class="Collapsible__Content">
+                                    <div class="Collapsible"><a href=""
+                                        class="Collapsible__Button Heading Text--subdued Link Link--primary">Nos adresses</a>
+                                    </div>
+                                    <div class="Collapsible"><a href=""
+                                        class="Collapsible__Button Heading Text--subdued Link Link--primary">Combien ça côute ?</a>
+                                    </div>
+                                    <div class="Collapsible"><a href=""
+                                            class="Collapsible__Button Heading Text--subdued Link Link--primary">Fonctionnement</a>
+                                    </div>
+                                    <div class="Collapsible"><a href=""
+                                            class="Collapsible__Button Heading Text--subdued Link Link--primary">Sites webs</a>
+                                    </div>
+                                    <div class="Collapsible"><a href=""
+                                        class="Collapsible__Button Heading Text--subdued Link Link--primary">Codes promos</a>
+                                    </div>
+                                    <div class="Collapsible"><a href=""
+                                            class="Collapsible__Button Heading Text--subdued Link Link--primary">Forum aux questions</a>
+                                    </div>
+                                    <div class="Collapsible"><a href=""
+                                        class="Collapsible__Button Heading Text--subdued Link Link--primary">Utiliser nos services</a>
+                                    </div>
+                                    <div class="Collapsible"><a href=""
+                                            class="Collapsible__Button Heading Text--subdued Link Link--primary">Délais de livraison</a>
+                                    </div>
+                                    <div class="Collapsible"><a href=""
+                                            class="Collapsible__Button Heading Text--subdued Link Link--primary">Accueil</a>
+                                    </div>
+                                    <!-- <div class="Collapsible"><a href=""
+                                            class="Collapsible__Button Heading Text--subdued Link Link--primary">Catalogue de produits</a>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="Collapsible">
+                            <button class="Collapsible__Button Heading" data-action="toggle-collapsible"
+                            aria-expanded="false">catalogue<span class="Collapsible__Plus"></span>
+                            </button>
+
+                            <div class="Collapsible__Inner">
+                                <div class="Collapsible__Content">
+                                    <div class="Collapsible">
+                                        <button class="Collapsible__Button_sub_Inner Heading sub_menu_btn" data-action="toggle-collapsible"
+                                        aria-expanded="false">Bricolages<span class="Collapsible__Plus"></span>
+                                        </button>
+                                        <div class="Collapsible__Inner_sub_Inner sub_menu">
+                                            <div class="Collapsible__Content">
+                                                <div class="Collapsible">
+                                                    <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">CHAISES HAUTE_1</a>
+                                                    <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">CHAISES HAUTE_2</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="Collapsible">
+                                        <button class="Collapsible__Button_sub_Inner Heading sub_menu_btn" data-action="toggle-collapsible"
+                                        aria-expanded="false">Décorations<span class="Collapsible__Plus"></span>
+                                        </button>
+                                        <div class="Collapsible__Inner_sub_Inner sub_menu">
+                                            <div class="Collapsible__Content">
+                                                <div class="Collapsible">
+                                                    <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">Sub_Décorations_1</a>
+                                                    <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">Sub_Décorations_2</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="Collapsible">
+                                        <button class="Collapsible__Button_sub_Inner Heading sub_menu_btn" data-action="toggle-collapsible"
+                                        aria-expanded="false">Electronique<span class="Collapsible__Plus"></span>
+                                        </button>
+                                        <div class="Collapsible__Inner_sub_Inner sub_menu">
+                                            <div class="Collapsible__Content">
+                                                <div class="Collapsible">
+                                                    <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">Sub_Electronique_1</a>
+                                                    <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">Sub_Electronique_2</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="Collapsible">
+                                        <button class="Collapsible__Button_sub_Inner Heading sub_menu_btn" data-action="toggle-collapsible"
+                                        aria-expanded="false">Informatiques<span class="Collapsible__Plus"></span>
+                                        </button>
+                                        <div class="Collapsible__Inner_sub_Inner sub_menu">
+                                            <div class="Collapsible__Content">
+                                                <div class="Collapsible">
+                                                    <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">Sub_Informatiques</a>
+                                                    <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">Sub_Informatiques</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="Collapsible">
+                                        <button class="Collapsible__Button_sub_Inner Heading sub_menu_btn" data-action="toggle-collapsible"
+                                        aria-expanded="false">Loisirs et Jouets<span class="Collapsible__Plus"></span>
+                                        </button>
+                                        <div class="Collapsible__Inner_sub_Inner sub_menu">
+                                            <div class="Collapsible__Content">
+                                                <div class="Collapsible">
+                                                    <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">Sub_Loisirs et Jouets_1</a>
+                                                    <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">Sub_Loisirs et Jouets_2</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="Collapsible">
+                                        <button class="Collapsible__Button_sub_Inner Heading sub_menu_btn" data-action="toggle-collapsible"
+                                        aria-expanded="false">Mécaniques<span class="Collapsible__Plus"></span>
+                                        </button>
+                                        <div class="Collapsible__Inner_sub_Inner sub_menu">
+                                            <div class="Collapsible__Content">
+                                                <div class="Collapsible">
+                                                    <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">Sub_Mécaniques_1</a>
+                                                    <a href="" class="Collapsible__Button Heading Text--subdued Link Link--primary">Sub_Mécaniques_2</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="Collapsible">
+                            <button class="Collapsible__Button Heading" data-action="toggle-collapsible"
+                            aria-expanded="false">contactez nous<span class="Collapsible__Plus"></span>
+                            </button>
+
+                            <div class="Collapsible__Inner">
+                                <div class="Collapsible__Content">
+                                    <ul class="dropdwon-container contact-list">
+                                        <li><span class="contact-list__label"><i class="fa fa-map-marker"></i> Adresse</span><span
+                                                class="contact-list__value">Route de Ngor NG03, Dakar SENEGAL</span></li>
+                                        <li><span class="contact-list__label"><i class="fa fa-phone-square"></i> numéro de
+                                                telephone</span> <span class="contact-list__value">(+221) 77 828 99 39</span></li>
+                                        <li><span class="contact-list__label"><i class="fa fa-envelope"></i> adresse Email</span> <span
+                                                class="contact-list__value">contact @shopmeaway.com</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                    <ul class="contact-list mt-15">
+                        <li>
+                            <span class="contact-list__label main_title">Réseaux sociaux</span>
+                            <span class="contact-list__value with-social-links">
+                                <a href="https://twitter.com/shopmeaway" target="_blank" class="twitter">
+                                    <i class="fa fa-twitter"></i>
+                                </a>
+
+                                <a href="https://fr-fr.facebook.com/ShopmeawaySenegal/" target="_blank"
+                                    class="facebook">
+                                    <i class="fa fa-facebook"></i>
+                                </a>
+
+                                <a href="https://fr.linkedin.com/company/shopmeaway" target="_blank" class="linkedin">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+
+                                <a href="https://www.instagram.com/shopmeaway/" target="_blank" class="instagram">
+                                    <i class="fa fa-instagram"></i>
+                                </a>
+
+                                <a href="https://api.whatsapp.com/send?phone=221778289939&text=Hi" class="whatsapp"
+                                    target="_blank">
+                                    <i class="mdi mdi-whatsapp"></i>
+                                </a>
+
+                                <a href="http://m.me/ShopmeawaySenegal" target="_blank" class="facebook-messenger">
+                                    <i class="mdi mdi-facebook-messenger"></i>
+                                </a>
+                            </span>
+                        </li>
+                        <!-- Social icon group End-->
+                    </ul>
+                    <!-- Contact Us End-->
+                </div>
+            </div>
+            <!-- END CONTACT SIDENAV -->
+            <div class="container">
+                <div class="card__flip__container mt-20">
+                    <h1 class="card__main__title">Avion</h1>
+
+                    <div class="card__row mb-10">
+                        <div class="card__flip">
+                            <div class="card__side card__side--back france">
+                                <button class="share-whatsapp" data-target="#address_for_france"><i class="mdi mdi-whatsapp"></i></button>
+                                <ul class="card__list__group" id="address_for_france">
+                                    <li class="card__list__group__item">
+                                        <span>Prénom - nom</span>
+                                        <span>AFRETAIR SHOPMEAWAY</span>
+                                    </li>
+                                    <li class="card__list__group__item">
+                                        <span>Adresse</span>
+                                        <span id="france-address">186 ALLEE DES ERABLES ZI PARIS NORD II VILLEPINTE</span>
+                                    </li>
+                                    <li class="card__list__group__item">
+                                        <span>Code postal</span>
+                                        <span id="france-postal_code">95941</span>
+                                    </li>
+                                    <li class="card__list__group__item">
+                                        <span>Ville</span>
+                                        <span id="france-city">Roissy Charles De Gaule</span>
+                                    </li>
+                                    <li class="card__list__group__item">
+                                        <span>Pays</span>
+                                        <span id="france-country">FRANCE</span>
+                                    </li>
+                                    <li class="card__list__group__item">
+                                        <span>Numéro de téléphone</span>
+                                        <span id="france-phone">01-48-63-12-11</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card__side card__side--front france">
+                                <h5>
+                                    <span class="fa fa-plane fa-2x"></span>
+                                    <span>FRANCE</span>
+                                </h5>
+                            </div>
+                        </div>
+
+                        <div class="card__flip">
+                            <div class="card__side card__side--back usa">
+                                <button class="share-whatsapp" data-target="#address_for_usa"><i class="mdi mdi-whatsapp"></i></button>
+                                <ul class="card__list__group" id="address_for_usa">
+                                    <li class="card__list__group__item">
+                                        <span>Name - Last name</span>
+                                        <span>SHOPMEAWAY ARI INTERNATIONAL</span>
+                                    </li>
+
+                                    <li class="card__list__group__item">
+                                        <span>Address</span>
+                                        <span>5315 FM 1960 RD W SUITE 521 B</span>
+                                    </li>
+
+                                    <li class="card__list__group__item">
+                                        <span>Zip Code</span>
+                                        <span>77069</span>
+                                    </li>
+
+                                    <li class="card__list__group__item">
+                                        <span>Town</span>
+                                        <span>HOUSTON</span>
+                                    </li>
+
+                                    <li class="card__list__group__item">
+                                        <span>State</span>
+                                        <span>
+                                            <span>TEXAS</span>
+                                        </span>
+                                    </li>
+
+                                    <li class="card__list__group__item">
+                                        <span>Phone number</span>
+                                        <span>800-443-9878</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card__side card__side--front usa">
+                                <h5>
+                                    <span class="fa fa-plane fa-2x"></span>
+                                    <span>ETATS-UNIS</span>
+                                </h5>
+                            </div>
+                        </div>
+
+                        <div class="card__flip">
+                            <div class="card__side card__side--back china">
+                                <button class="share-whatsapp" data-target="#address_for_china"><i class="mdi mdi-whatsapp"></i></button>
+                                <ul class="card__list__group" id="address_for_china">
+                                    <li class="card__list__group__item">
+                                        <span>Name - Last name</span>
+                                        <span>Left and right freight limited</span>
+                                    </li>
+
+                                    <li class="card__list__group__item">
+                                        <span>Address</span>
+                                        <span>He Sheng Building NO.633 Bu Long RD Bantian Street</span>
+                                    </li>
+
+                                    <li class="card__list__group__item">
+                                        <span>Zip Code</span>
+                                        <span>518109</span>
+                                    </li>
+
+                                    <li class="card__list__group__item">
+                                        <span>Town</span>
+                                        <span>Shenzen</span>
+                                    </li>
+
+                                    <li class="card__list__group__item">
+                                        <span>State</span>
+                                        <span>China</span>
+                                    </li>
+
+                                    <li class="card__list__group__item">
+                                        <span>Phone number</span>
+                                        <span>18613098981</span>
+                                    </li>
+
+                                    <li class="card__list__group__item">
+                                        <span>Local language</span>
+                                        <span>左右运通物流有限公司 , 深圳市龙岗区坂田街布龙路633号和盛大厦103室518109, +8617722655027</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card__side card__side--front china">
+                                <h5>
+                                    <span class="fa fa-plane fa-2x"></span>
+                                    <span>CHINE</span>
+                                </h5>
+                            </div>
                         </div>
                     </div>
+                    
+                    <h1 class="card__main__title mt-20">Bateau</h1>         
+                    
 
-                    <div class="card__flip">
-                        <div class="card__side card__side--back usa">
-                            <button class="share-whatsapp" data-target="#address_for_usa"><i class="mdi mdi-whatsapp"></i></button>
-                            <ul class="card__list__group" id="address_for_usa">
-                                <li class="card__list__group__item">
-                                    <span>Name - Last name</span>
-                                    <span>SHOPMEAWAY ARI INTERNATIONAL</span>
-                                </li>
-
-                                <li class="card__list__group__item">
-                                    <span>Address</span>
-                                    <span>5315 FM 1960 RD W SUITE 521 B</span>
-                                </li>
-
-                                <li class="card__list__group__item">
-                                    <span>Zip Code</span>
-                                    <span>77069</span>
-                                </li>
-
-                                <li class="card__list__group__item">
-                                    <span>Town</span>
-                                    <span>HOUSTON</span>
-                                </li>
-
-                                <li class="card__list__group__item">
-                                    <span>State</span>
-                                    <span>
-                                        <span>TEXAS</span>
-                                    </span>
-                                </li>
-
-                                <li class="card__list__group__item">
-                                    <span>Phone number</span>
-                                    <span>800-443-9878</span>
-                                </li>
-                            </ul>
+                    <div class="card__row mb-10">
+                        <div class="card__flip">
+                            <div class="card__side card__side--back france">
+                                <ul class="card__list__group">
+                                    <li class="card__list__group__item">
+                                        Merci de nous contacter pour obtenir l'adresse la plus proche de l'emplacement de vos articles
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card__side card__side--front france">
+                                <h5>FRANCE </h5>
+                            </div>
                         </div>
-                        <div class="card__side card__side--front usa">
-                            <h5>
-                                <span class="fa fa-plane fa-2x"></span>
-                                <span>ETATS-UNIS</span>
-                            </h5>
+
+                        <div class="card__flip">
+                            <div class="card__side card__side--back usa">
+                                <ul class="card__list__group">
+                                    <li class="card__list__group__item">
+                                        Merci de nous contacter pour obtenir l'adresse la plus proche de l'emplacement de vos articles
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card__side card__side--front usa">
+                                <h5>ETATS-UNIS</h5>
+                            </div>
                         </div>
-                    </div>
 
-                    <div class="card__flip">
-                        <div class="card__side card__side--back china">
-                            <button class="share-whatsapp" data-target="#address_for_china"><i class="mdi mdi-whatsapp"></i></button>
-                            <ul class="card__list__group" id="address_for_china">
-                                <li class="card__list__group__item">
-                                    <span>Name - Last name</span>
-                                    <span>Left and right freight limited</span>
-                                </li>
-
-                                <li class="card__list__group__item">
-                                    <span>Address</span>
-                                    <span>He Sheng Building NO.633 Bu Long RD Bantian Street</span>
-                                </li>
-
-                                <li class="card__list__group__item">
-                                    <span>Zip Code</span>
-                                    <span>518109</span>
-                                </li>
-
-                                <li class="card__list__group__item">
-                                    <span>Town</span>
-                                    <span>Shenzen</span>
-                                </li>
-
-                                <li class="card__list__group__item">
-                                    <span>State</span>
-                                    <span>China</span>
-                                </li>
-
-                                <li class="card__list__group__item">
-                                    <span>Phone number</span>
-                                    <span>18613098981</span>
-                                </li>
-
-                                <li class="card__list__group__item">
-                                    <span>Local language</span>
-                                    <span>左右运通物流有限公司 , 深圳市龙岗区坂田街布龙路633号和盛大厦103室518109, +8617722655027</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card__side card__side--front china">
-                            <h5>
-                                <span class="fa fa-plane fa-2x"></span>
-                                <span>CHINE</span>
-                            </h5>
+                        <div class="card__flip">
+                            <div class="card__side card__side--back china">
+                                <ul class="card__list__group">
+                                    <li class="card__list__group__item">
+                                        Merci de nous contacter pour obtenir l'adresse la plus proche de l'emplacement de vos articles
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card__side card__side--front china">
+                                <h5>CHINE</h5>
+                            </div>
                         </div>
                     </div>
                 </div>
-                
-                <h1 class="card__main__title mt-20">Bateau</h1>         
-                
-
-                <div class="card__row mb-10">
-                    <div class="card__flip">
-                        <div class="card__side card__side--back france">
-                            <ul class="card__list__group">
-                                <li class="card__list__group__item">
-                                    Merci de nous contacter pour obtenir l'adresse la plus proche de l'emplacement de vos articles
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card__side card__side--front france">
-                            <h5>FRANCE </h5>
-                        </div>
-                    </div>
-
-                    <div class="card__flip">
-                        <div class="card__side card__side--back usa">
-                            <ul class="card__list__group">
-                                <li class="card__list__group__item">
-                                    Merci de nous contacter pour obtenir l'adresse la plus proche de l'emplacement de vos articles
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card__side card__side--front usa">
-                            <h5>ETATS-UNIS</h5>
-                        </div>
-                    </div>
-
-                    <div class="card__flip">
-                        <div class="card__side card__side--back china">
-                            <ul class="card__list__group">
-                                <li class="card__list__group__item">
-                                    Merci de nous contacter pour obtenir l'adresse la plus proche de l'emplacement de vos articles
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="card__side card__side--front china">
-                            <h5>CHINE</h5>
-                        </div>
-                    </div>
-                </div>
-            </div> 
+            </div>
         </main>
 
         <a href="#" class="scrollup" id="scrollup">
