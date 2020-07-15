@@ -44,6 +44,10 @@
     display: none;
 }
 
+.logo-euro i {
+    font-size: 30px;
+}
+
 @media (min-width: 1920px) and (max-width: 2560px) {
     .team-grids {
         display: grid;

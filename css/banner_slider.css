@@ -42,51 +42,6 @@
 .container-fluid {
 	width: 100%;
 }
-
-.banner-slider .item {
-	height: 35vw;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
-.slitem01.desktop-background {
-	background-image: url("../uploads/slider/banner/Slider-banner-Africa/slider-banner-africa-editable_background.png");
-}
-
-.slitem02.desktop-background {
-	background-image: url("../uploads/slider/banner/Slider-banner-Europe/slider-banner-europe-editable_background.png");
-}
-
-.slitem03.desktop-background {
-	background-image: url("../uploads/slider/banner/Slider-banner-USA/slider-banner-usa-editable_background.png");
-}
-
-.slitem04.desktop-background {
-	background-image: url("../uploads/slider/banner/Slider-banner-China/slider-banner-china-editable_background.png");
-}
-
-.slider-africa-left {
-    height: 100%;
-    position: relative;
-}
-
-.slitem01 {
-	background-image: url("../uploads/slider/banner/Slider-banner-Africa/africa-background.png");
-}
-
-.slitem02 {
-	background-image: url("../uploads/slider/banner/Slider-banner-Europe/europe-background.png");
-}
-
-.slitem03 {
-	background-image: url("../uploads/slider/banner/Slider-banner-USA/us-background.png");
-}
-
-.slitem04 {
-	background-image: url("../uploads/slider/banner/Slider-banner-China/china-background.png");
-}
-
 /*Africa*/
 
 .slider-africa-left p {
@@ -132,11 +87,6 @@
     width: 12vw;
 }
 
-.owl-carousel .item img {
-	user-select: none;
-	object-position: center right;
-}
-
 .logo-wrap.logo-zara img {
 	max-width: 95%;
 }
@@ -166,11 +116,6 @@
 
 .owl-carousel .item .logo-arrow img {
     margin-left: -19%;
-    /*margin-bottom: 1%;*/
-/*	width: auto;
-	height: auto;
-	max-width: unset;
-	max-height: unset;*/
 }
 
 .many-more-africa {
@@ -217,8 +162,6 @@
 .banner-slider .slider-left-logo img {
 	max-width: 100%;
 }
-
-
 
 /*Europe*/
 
