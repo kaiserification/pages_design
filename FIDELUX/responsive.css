@@ -1,0 +1,166 @@
+
+@media screen and (max-width: 1440px) {
+	.card-wrap {
+	    min-width: 305px;
+	}
+
+}
+
+/* XL Device :1200px. */
+@media (max-width: 1200px) {
+	.card-wrap {
+	    min-width: 291px;
+	}
+
+	.card-content {
+		padding: 10px;
+	}
+
+	.card-wrap {
+	    min-width: 250px;
+	}
+
+	p.card-description {
+	    font-size: 15px;
+	}
+
+
+	.comment-wrapper {
+	    background-size: 82% 70%;
+	}    
+}
+
+@media (max-width: 1024px) {
+	.banner-wrapper {
+	    background-size: 73% 100%;
+	}
+
+	.card-group-3columes, .card-group-2columes {
+		display: block !important;
+	}
+
+	.btn-wrap {
+	    width: 50%;
+	}
+
+	.comment-card-wrap {
+	    margin: 25px auto;
+	}
+
+	.btn-wrap {
+	    margin: auto;
+	}
+
+	.comment-wrapper {
+	    background-size: 86% 43%;
+	    background-position: bottom -114px right -30px;
+	}
+}
+
+
+/* LG Device :992px. */
+@media (min-width: 768px) and (max-width: 1024px) {
+	.banner-content-wrap {
+	    position: absolute;
+	    top: 55%;
+	}
+
+	.card-wrap,
+	.btn-wrap-out {
+	    width: 45vw;
+	    margin: 25px auto;
+	}
+
+	p.card-description {
+	    font-size: 2vw;
+	}
+}
+
+
+@media screen and (max-width: 767px) {
+	.banner-logo-wrap {
+	    margin-top: 50px;
+	    margin-bottom: -30px;
+	}
+
+	.banner-wrapper {
+	    margin-top: -50px;
+	    margin-left: -30px;
+	}
+
+	.banner-wrapper {
+	    background-size: 85% 100%;
+	}
+
+	.banner-content-wrap {
+		position: relative;
+		padding-top: 120px;
+	}
+
+	h1.banner-content-title {
+		font-size: 5vw;
+	}
+
+	p.banner-content-text {
+		font-size: 2.3vw;
+	}
+
+	.banner-logo-wrap img {
+	    width: 27vw;
+	}
+
+	.section-description {
+		padding-top: 90px;
+	}
+
+	.card-wrap {
+	    width: 373px;
+	    margin: 25px auto;
+	}
+
+	.btn-wrap-out {
+		width: 373px;
+	}
+}
+
+
+@media (max-width: 480px) {
+	.card-wrap,
+	.comment-card-wrap {
+	    width: 100%;
+	    margin: 25px auto;
+	    min-width: auto;
+	}
+
+	.btn-wrap-out {
+		width: 100%;
+
+	}
+
+	p.description-title {
+		font-size: 25px;
+	}
+
+	p.description-title-des {
+	    font-size: 17px;
+	}
+
+	.container-fluid {
+	    width: 90%;
+	}
+
+	.banner-logo-wrap {
+	    margin-top: 50px;
+	    margin-bottom: -5px;
+	}
+
+	.banner-wrapper .container-fluid {
+		margin-right: 0;
+	}
+
+	.comment-wrapper {
+	    background-size: 100% 20%;
+	    background-position: bottom -75px right -30px;
+	}
+
+}
